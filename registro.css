@@ -3,7 +3,8 @@
  }
 
 #header {
-    width: auto; background-color: rgba(224, 26, 26, 0.933); 
+    width: auto; 
+    background-color: rgba(224, 26, 26, 0.933); 
     height: 75px; 
     display: flex; 
     justify-content: space-between; 
@@ -61,7 +62,105 @@
 }
 
 #form_re{
+    margin: auto;
+    margin-left: 1%;
+    margin-top: 5%;
+    padding: 25px;
+    width: 350px;
+    height: 450px;
+    margin-right: 260px;
     display: flex;
     flex-direction: column;
+    border-radius: 7px;
+    background-color: #c91010;
+}
+
+#form_re label{
+    font-size: 22px;
+    font-family: 'Poppins' ;
+    margin: 5px;
+    color: #fff;
+}
+
+#form_re label input{
+    background: none;
+    border: none;
+}
+
+.inp_re{
+    background-color: #c91010;
+    border: none;
+    border-bottom: 3px #000 solid;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    color: #000;
+    font-size: 18px;
+}
+
+.inp_re:focus{
+    outline: none;
+}
+
+#but_re{
+    margin: auto;
+    padding: 10px;
+    padding-left: 90px;
+    padding-right: 90px;
+    background-color: #fff;
+    border: #000 solid 1.5px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    font-family: 'Poppins';
+    font-size: 22px;
+}
+
+#re_co{
+    color: #18e74c;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#but_re:link{
+    color: #000;
+}
+
+#but_re:visited + #re_co{
+    visibility: visible;
+    opacity: 1;
+}
+
+#but_re:visited{
+    color: #000;
+}
+
+#but_re:hover{
+    color: #fff;
+    background-color: #000;
+}
+
+#re_co.mostrar {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+#robot{
+    width: 420px;
+}
+
+#foot{
+    width: auto; 
+    margin-top: 218px ;
+    background-color: rgba(224, 26, 26, 0.933); 
+    height: 75px; 
+    display: flex; 
     justify-content: center;
+}
+
+#derechos{
+    color: #000;
+    font-size: 22px;
+    margin: auto;
+    font-family: 'Poppins';
 }
