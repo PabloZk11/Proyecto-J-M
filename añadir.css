@@ -117,10 +117,10 @@ form .username{
     color: rgb(233, 223, 223);
     cursor: pointer;
     height: -20px;
-    margin: 12px;
+    margin-top: 20px;
 }
 .recordar a{
-    color: white;
+    color:white;
 }
 .recordar:hover{
      text-decoration: underline;
@@ -130,6 +130,7 @@ input[type="submit"]{
     height: 50px;
     border: 1px;
     background: rgb(177, 52, 52)
+    
 }
 input[type="submit"]{  
     border-color: rgb(255, 253, 253);
@@ -138,11 +139,11 @@ input[type="submit"]{
     margin-bottom: 10px;
 }
 .registrarse a{
-    margin: 30px 20px;
+    
     text-align: center;
     font-size: 16px;
-    margin-top: 24px 14px;
     color:rgb(255, 255, 255)
+
     
     
 }
@@ -169,3 +170,8 @@ footer{
     font-size: 20px;
     color: white;
 }
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    font-size: 16px;
+  }

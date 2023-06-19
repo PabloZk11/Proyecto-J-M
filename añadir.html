@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="añadir.css">
+    <title>sesion</title>
+</head>
+<body>
+    
+    <header>
+        <img src="imagenes/logo.png" class="logo" >
+        <a><h1>Añadir producto</h1></a>
+        <nav>
+           <a href="">inicio</a>
+           <a href="">registrarse<a>
+        </nav>
+
+    </header>
+    <div class="formulario">
+        <h2>Añadir producto</h2>
+        <form method="POST" action="#"> 
+            <div class="username">
+                <input type="text" id="campo-especifico" name="username" name="Correo" placeholder="nombre articulo" required>
+                <label class="input"></label>
+            </div>
+            <div class="username">
+                <input type="text" id="campo-especifico" name="username" placeholder="precio" required>
+                <label class="input"></label>
+            </div>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora">
+
+
+
+            <div class="recordar"><a href="contraseña.html">¿olvido su contraseña?</div<a></a>
+                <script>
+                    function alerta(){
+                        alert("Producto añadido correctamente")
+                    }   
+                </script>
+            <input type="submit"  onclick="alerta()" "recordar"  value="Ingresar">
+            <div class="registrarse"> 
+                <a href="registro.html"> Registrate</a>
+            </div>
+        </form>
+    </div>
+  
+</div>
+<img src="imagenes/robot.png" class="imagen">
+<footer>
+    <small>&copy; 2023  <b>Aulas</b> - todos los derechos reservados  </small>
+</footer>
+</body>
+</html>
