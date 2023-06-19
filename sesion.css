@@ -1,0 +1,156 @@
+body{
+    font-family:  sans-serif;
+    margin: 0;
+    background-color: white;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a{
+ text-decoration: none;
+ color: azure;
+}
+header{ 
+    display: flex;
+    background-color: #db0c0c;
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: auto;
+    
+}
+.logo{
+    display: flex;
+}
+.logo {
+    height: 70px;
+    margin-right: 10px;
+}
+nav a{
+    font-weight: 600;
+    padding: 23px 20px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 506px){
+
+    header{
+        flex-direction:column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+.formulario{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background:rgb(207, 12, 12);
+    min-width: 100px;
+    margin-left: -200px;
+    }
+.formulario h2{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid rgb(233, 225, 225);
+}
+.formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+form .username{
+    position: relative;
+    border-bottom: 2px solid rgb(253, 248, 248);
+    margin: 20px 0px;
+    color: rgb(245, 0, 0);
+}
+.username input{
+    width: 100%;
+    padding:  0 5px;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.username label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #da4040;
+    transform: translateY(-40%);
+    font-size: 16px;
+    pointer-events: none;
+    transition:  .5s;
+}
+.username span::before{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(185, 3, 39);
+} 
+.username input:focus ~ label,
+.username input:focus ~ label{
+    top: -5px
+     crimson
+}
+.username input:focus ~ span::before,
+.username input:focus ~ span::before{
+    width: 100%;
+    color: crimson
+}
+.recordar{
+    margin:  -7px 0 2px 5px;
+    color: rgb(247, 247, 247);
+    cursor: pointer;
+    height: -20px;
+    margin: 12px;
+}
+.recordar:hover{
+     text-decoration: underline;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px;
+    background: rgb(177, 52, 52)
+}
+input[type="submit"]{  
+    border-color: rgb(255, 253, 253);
+    transition: .5s;
+}
+.registrarse a{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 12px 12px;
+    color:rgb(255, 255, 255)
+    
+}
+.registrarse a:hover{
+    text-decoration: underline;
+}
+
+.input{
+    color: rgb(236, 236, 236);
+}
+#campo-especifico {
+    color: rgb(226, 226, 226);
+}
+.imagen{
+    margin-left: 350px;
+}
+footer{
+    background-color: #db0c0c;
+    width: 100%;
+    height: 100%;
+    margin-top: 75px;
+    font-size: 20px;
+}
