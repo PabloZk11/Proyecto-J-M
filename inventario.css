@@ -2,13 +2,18 @@
     padding: 0px; margin: 0px;
  }
 
+
 #header {
     width: auto; 
-    background-color: rgba(177, 52, 52, 0.933); 
+    background-color: #a72c2c; 
     height: 75px; 
     display: flex; 
     justify-content: space-between; 
     padding-bottom: 10px;
+}
+
+#logo{
+    margin-left: 25px;
 }
 
 #nav_re { 
@@ -37,16 +42,16 @@
 }
 
 .a_nav:link { 
-    color: #000; 
+    color: #fff; 
 }
 
 .a_nav:visited { 
-    color: #000; 
+    color: #fff; 
 }
 
 .a_nav:hover { 
-    color: #fff; 
-    background-color: #000;
+    color: #000; 
+    background-color: #fff;
 }
 
 #tit_inv{
@@ -91,6 +96,9 @@
     width: 65px;
 }
 
+#nom_table{
+    width: 325px;
+}
 
 .fila_i{
     background-color: #B6B4B9;
@@ -104,4 +112,25 @@
 
 .text_filas{
     padding: 6.8px;
+}
+
+.btn-edit{
+    width: 85px;
+    height: 30px;
+}
+
+#foot{
+    width: auto; 
+    margin-top: 410px ;
+    background-color: #a72c2c; 
+    height: 75px; 
+    display: flex; 
+    justify-content: center;
+}
+
+#derechos{
+    color: #fff;
+    font-size: 22px;
+    margin: auto;
+    font-family: 'Poppins';
 }

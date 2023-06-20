@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inventario.css">
+    <script src="script.java"></script>
     <title>Inventario</title>
 </head>
 <body>
@@ -25,10 +26,11 @@
                 <thead>
                     <tr>
                         <th id="id_table">ID</th>
-                        <th>Nombre</th>
+                        <th id="nom_table">Nombre</th>
                         <th>Precio</th>
                         <th>Unidades</th>
                         <th>Fecha</th>
+                        <th>Editar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +41,7 @@
                         <td class="text_filas">$ 18.000</td>
                         <td class="text_filas">20</td>
                         <td class="text_filas">26/03/2023</td>
+                        <td><button class="btn-edit">Editar</button></td>
                     </tr>
                     <tr class="fila_p">
                         <td class="text_filas">02</td>
@@ -46,6 +49,7 @@
                         <td class="text_filas">$12,500</td>
                         <td class="text_filas">50</td>
                         <td class="text_filas">10/05/2023</td>
+                        <td><button class="btn-edit">Editar</button></td>
                     </tr>
                     <tr class="fila_i">
                         <td class="text_filas">03</td>
@@ -53,6 +57,7 @@
                         <td class="text_filas">$6,990</td>
                         <td class="text_filas">30</td>
                         <td class="text_filas">05/02/2023</td>
+                        <td><button class="btn-edit">Editar</button></td>
                     </tr>
                     <tr class="fila_p">
                         <td class="text_filas">04</td>
@@ -60,6 +65,7 @@
                         <td class="text_filas">$8,750</td>
                         <td class="text_filas">15</td>
                         <td class="text_filas">18/07/2023</td>
+                        <td><button class="btn-edit">Editar</button></td>
                     </tr>
                     <tr class="fila_i">
                         <td class="text_filas">05</td>
@@ -67,10 +73,14 @@
                         <td class="text_filas">$24,990</td>
                         <td class="text_filas">10</td>
                         <td class="text_filas">02/11/2023</td>
+                        <td><button class="btn-edit">Editar</button></td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
+    <footer id="foot">
+        <p id="derechos">J&M D.S - Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
