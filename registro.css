@@ -11,6 +11,10 @@
     padding-bottom: 10px;
 }
 
+#logo{
+    margin-left: 25px;
+}
+
 #nav_re { 
     width: 380px;
 }
