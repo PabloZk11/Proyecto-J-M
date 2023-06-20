@@ -4,7 +4,7 @@
 
 #header {
     width: auto; 
-    background-color: rgba(172, 42, 42, 0.933); 
+    background-color: #a72c2c; 
     height: 75px; 
     display: flex; 
     justify-content: space-between; 
@@ -157,7 +157,7 @@
 #foot{
     width: auto; 
     margin-top: 218px ;
-    background-color: rgba(172, 42, 42, 0.933); 
+    background-color: #a72c2c; 
     height: 75px; 
     display: flex; 
     justify-content: center;
