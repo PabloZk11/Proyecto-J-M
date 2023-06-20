@@ -150,7 +150,6 @@
 
 #foot{
     width: auto; 
-    margin-top: 218px ;
     background-color: #a72c2c; 
     height: 75px; 
     display: flex; 
@@ -162,4 +161,34 @@
     font-size: 22px;
     margin: auto;
     font-family: 'Poppins';
+}
+
+#pqrs_se{
+    display: flex;
+    justify-content: end;
+}
+
+#icon_pqrs{
+    font-size: 50px;
+    margin: 10px;
+    margin-top: 20px;
+    color: #000;
+}
+
+#icon_pqrs:link{
+    font-size: 50px;
+    margin: 10px;
+    margin-top: 130px;
+    color: #000;
+}
+
+#icon_pqrs:visited{
+    font-size: 50px;
+    margin: 10px;
+    margin-top: 130px;
+    color: #000;
+}
+
+#icon_pqrs:active{
+    color: #000;
 }
