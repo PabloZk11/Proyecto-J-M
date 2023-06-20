@@ -50,7 +50,7 @@
 
 .a_nav:hover { 
     color: #000; 
-    background-color: #26ea11;
+    background-color: #fff;
 }
 
 #tit_re{
@@ -141,7 +141,7 @@
 
 #but_re:hover{
     color: #fff;
-    background-color: #160fd7;
+    background-color: #516faf;
 }
 
 #re_co.mostrar {
