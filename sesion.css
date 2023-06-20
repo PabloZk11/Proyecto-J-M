@@ -1,116 +1,175 @@
-body{
-    font-family:  sans-serif;
-    margin: 0;
-    background-color: white;
-    text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+* { 
+    padding: 0px; margin: 0px;
+ }
+
+#header {
+    width: auto; 
+    background-color: #a72c2c; 
+    height: 75px; 
+    display: flex; 
+    justify-content: space-between; 
+    padding-bottom: 10px;
 }
 
-a{
- text-decoration: none;
- color: rgb(3, 3, 3);
+#logo{
+    margin-left: 25px;
 }
-header{ 
-    display: flex;
-    background-color: #db0c0c;
-    min-height: 70px;
-    justify-content: space-between;
-    align-items: center;
+
+#nav_se { 
+    width: 380px;
+}
+
+#nav_ul { 
+    display: flex; list-style: none; 
+}
+
+.li_nav { 
+    margin: 30px 15px 15px; 
+    margin-right: 25px;
+    transition: all 0.2s ease 0s; 
+}
+
+
+.a_nav {
+    width: 50px;
     padding: 10px;
-    z-index: auto;
-    
-}
-.logo{
-    display: flex;
-}
-.logo {
-    height: 70px;
-    margin-right: 10px;
-}
-nav a:hover{
-    font-weight: 200;
-    padding: 10px 10px;
-    background-color: black;
-    color: white;
-
-    
-}
-
-@media (max-width: 506px){
-
-    header{
-        flex-direction:column;
-    }
-    nav{
-        padding: 10px 0px;
-    }
-}
-.formulario{
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background:rgb(219, 11, 11);
-    min-width: 100px;
-    margin-left: -200px;
+    font-size: 22px; 
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none; 
+    transition: all 0.2s ease 0s; 
     border-radius: 5px;
-    }
-.formulario h2{
+}
+
+.a_nav:link { 
+    color: #fff; 
+}
+
+.a_nav:visited { 
+    color: #fff; 
+}
+
+.a_nav:hover { 
+    color: #000; 
+    background-color: #fff;
+}
+
+#tit_se{
     text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid rgb(233, 225, 225);
-    color: white;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    color: #fff;
 }
-.formulario form{
-    padding: 0 40px;
-    box-sizing: border-box;
-    color: rgb(255, 255, 255);
+
+#sec_se{
+    display: flex;
+    justify-content: center;
 }
-form .username{
-    position: relative;
-    border-bottom: 2px solid rgb(253, 248, 248);
-    margin: 20px 0px;
-    color: rgb(245, 0, 0);
+
+#form_se{
+    margin: auto;
+    margin-left: 1%;
+    margin-top: 8%;
+    padding: 25px;
+    width: 350px;
+    height: 300px;
+    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    background-color: rgba(172, 42, 42, 0.933);
 }
-.username input{
-    width: 100%;
-    padding:  0 5px;
-    height: 30px;
-    font-size: 18px;
-    border: none;
+
+#form_se label{
+    font-size: 22px;
+    font-family: 'Poppins' ;
+    margin: 5px;
+    color: #fff;
+}
+
+#form_se label input{
     background: none;
+    border: none;
+}
+
+.inp_se{
+    background-color: rgba(177, 52, 52, 0.933);
+    border: none;
+    border-bottom: 2.5px #000 solid;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.inp_se:focus{
     outline: none;
 }
-.username label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    color: #b61717;
-    transform: translateY(-40%);
+
+#but_se{
+    margin: auto;
+    padding: 10px;
+    padding-left: 90px;
+    padding-right: 90px;
+    background-color: #fff;
+    border: #000 solid 1.5px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    font-family: 'Poppins';
+    font-size: 22px;
+}
+
+#re_co{
+    color: #18e74c;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#but_se:link{
+    color: #000;
+}
+
+#but_se:visited + #re_co{
+    visibility: visible;
+    opacity: 1;
+}
+
+#but_re:visited{
+    color: #000;
+}
+
+#but_se:hover{
+    color: #fff;
+    background-color: #516faf;
+}
+
+#robot{
+    width: 420px;
+}
+
+#foot{
+    width: auto; 
+    margin-top: 218px ;
+    background-color: #a72c2c; 
+    height: 75px; 
+    display: flex; 
+    justify-content: center;
+}
+
+#derechos{
+    color: #fff;
+    font-size: 22px;
+    margin: auto;
+    font-family: 'Poppins';
+}
+.registrarse a{
+    margin: 30px 20px;
+    text-align: center;
     font-size: 16px;
-    pointer-events: none;
-    transition:  .5s;
-}
-.username span::before{
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: rgb(185, 3, 39);
-} 
-.username input:focus ~ label,
-.username input:focus ~ label{
-    top: -5px
-     crimson
-}
-.username input:focus ~ span::before,
-.username input:focus ~ span::before{
-    width: 100%;
-    color: crimson
+    margin-top: 24px 14px;
+    color:rgb(255, 255, 255)
+  
 }
 .recordar{
     margin:  -7px 0 2px 5px;
@@ -123,49 +182,5 @@ form .username{
     color: white;
 }
 .recordar:hover{
-     text-decoration: underline;
-}
-input[type="submit"]{
-    width: 100%;
-    height: 50px;
-    border: 1px;
-    background: rgb(177, 52, 52)
-}
-input[type="submit"]{  
-    border-color: rgb(255, 253, 253);
-    transition: .5s;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.registrarse a{
-    margin: 30px 20px;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 24px 14px;
-    color:rgb(255, 255, 255)
-    
-    
-}
-.registrarse a:hover{
-    text-decoration: underline;
-    
-    
-}
-
-.input{
-    color: rgb(218, 194, 194);
-}
-#campo-especifico {
-    color: rgb(226, 226, 226);
-}
-.imagen{
-    margin-left: 350px;
-}
-footer{
-    background-color: #db0c0c;
-    width: 100%;
-    height: 100%;
-    margin-top: 75px;
-    font-size: 20px;
-    color: white;
+     text-decoration: none;
 }
