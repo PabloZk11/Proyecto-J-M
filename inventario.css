@@ -1,0 +1,107 @@
+* { 
+    padding: 0px; margin: 0px;
+ }
+
+#header {
+    width: auto; 
+    background-color: rgba(177, 52, 52, 0.933); 
+    height: 75px; 
+    display: flex; 
+    justify-content: space-between; 
+    padding-bottom: 10px;
+}
+
+#nav_re { 
+    width: 380px;
+}
+
+#nav_ul { 
+    display: flex; list-style: none; 
+}
+
+.li_nav { 
+    margin: 30px 15px 15px; 
+    margin-right: 25px;
+    transition: all 0.2s ease 0s; 
+}
+
+
+.a_nav {
+    width: 50px;
+    padding: 10px;
+    font-size: 22px; 
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none; 
+    transition: all 0.2s ease 0s; 
+    border-radius: 5px;
+}
+
+.a_nav:link { 
+    color: #000; 
+}
+
+.a_nav:visited { 
+    color: #000; 
+}
+
+.a_nav:hover { 
+    color: #fff; 
+    background-color: #000;
+}
+
+#tit_inv{
+    text-align: center;
+    margin-top: 22px;
+    margin-bottom: 55px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    color: rgba(177, 52, 52, 0.933) ;
+}
+
+#table_inv{
+    font-size: 30px;
+    width: 950px;
+    margin: auto;
+    padding: 0;
+    background-color: #463c3c;
+    border-collapse: collapse ;
+    table-layout: fixed;
+}
+
+#table_inv thead{
+    background-color: #ED9A9A;
+    border: #000 2px solid;
+}
+
+#table_inv thead tr{
+    border: #000 2px solid;
+}
+
+#table_inv thead tr th{
+    border: #000 2px solid;
+    text-align: center;
+}
+
+#table_inv tbody tr td{
+    border: #000 2px solid;
+    text-align: center;
+}
+
+#id_table{
+    width: 65px;
+}
+
+
+.fila_i{
+    background-color: #B6B4B9;
+    font-size: 22px;
+}
+
+.fila_p{
+    background-color: #DDDBE1;
+    font-size: 22px;
+}
+
+.text_filas{
+    padding: 6.8px;
+}
