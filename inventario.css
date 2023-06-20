@@ -121,7 +121,7 @@
 
 #foot{
     width: auto; 
-    margin-top: 410px ;
+    margin-top: 350px ;
     background-color: #a72c2c; 
     height: 75px; 
     display: flex; 
@@ -133,4 +133,32 @@
     font-size: 22px;
     margin: auto;
     font-family: 'Poppins';
+}
+
+#ag_prod{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#but_ag{
+    font-size: 25px;
+    padding: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #47b34e;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: all 0.25s ease;
+}
+
+#but_ag:link{
+    color: #000;
+}
+
+#but_ag:visited{
+    color: #000;
+}
+
+#but_ag:hover{
+    color: #fff;
 }
