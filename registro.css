@@ -37,16 +37,16 @@
 }
 
 .a_nav:link { 
-    color: #000; 
+    color: #fff; 
 }
 
 .a_nav:visited { 
-    color: #000; 
+    color: #fff; 
 }
 
 .a_nav:hover { 
-    color: #fff; 
-    background-color: #000;
+    color: #000; 
+    background-color: #26ea11;
 }
 
 #tit_re{
@@ -54,6 +54,7 @@
     margin-top: 15px;
     font-family: 'Poppins', sans-serif;
     font-size: 35px;
+    color: #fff;
 }
 
 #sec_re{
@@ -93,7 +94,7 @@
     border-bottom: 2.5px #000 solid;
     padding-bottom: 5px;
     padding-left: 3px;
-    color: #000;
+    color: #fff;
     font-size: 18px;
 }
 
@@ -136,7 +137,7 @@
 
 #but_re:hover{
     color: #fff;
-    background-color: #000;
+    background-color: #160fd7;
 }
 
 #re_co.mostrar {
@@ -159,7 +160,7 @@
 }
 
 #derechos{
-    color: #000;
+    color: #fff;
     font-size: 22px;
     margin: auto;
     font-family: 'Poppins';
