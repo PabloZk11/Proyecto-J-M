@@ -65,7 +65,7 @@
 
 #table_inv{
     font-size: 30px;
-    width: 950px;
+    width: 1150px;
     margin: auto;
     padding: 0;
     background-color: #463c3c;
@@ -100,6 +100,7 @@
     width: 325px;
 }
 
+
 .fila_i{
     background-color: #B6B4B9;
     font-size: 22px;
@@ -121,7 +122,7 @@
 
 #foot{
     width: auto; 
-    margin-top: 410px ;
+    margin-top: 350px ;
     background-color: #a72c2c; 
     height: 75px; 
     display: flex; 
@@ -133,4 +134,67 @@
     font-size: 22px;
     margin: auto;
     font-family: 'Poppins';
+}
+
+#ag_prod{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#but_ag{
+    font-size: 25px;
+    padding: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #47b34e;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: all 0.25s ease;
+}
+
+#but_ag:link{
+    color: #000;
+}
+
+#but_ag:visited{
+    color: #000;
+}
+
+#but_ag:hover{
+    color: #fff;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 23px;
+    background-color: #47b34e ;
+    border-radius: 40px;
+}
+
+.switch::after{
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+    background-color: #DDDBE1;
+    left: 3px;
+    top: 3px;
+    transition: all 0.3s ease;
+}
+
+input[type='checkbox']:checked + .switch::after{
+    transform: translate(17px);
+    background-color: #000;
+}
+
+input[type='checkbox']:checked + .switch{
+    background-color: #2a8994 ;
+}
+
+.offscreen{
+    position: absolute;
+    left: -99999px;
 }
