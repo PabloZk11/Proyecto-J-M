@@ -1,45 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 html{
     scroll-behavior: smooth;
 }
 
 
-*{
-    padding: 0;
-    margin: 0;
-}
 
 body{
     background-color: #ffffff;
 }
 
-#header{
-    display: flex;
-    height: 75px;
-    width: 100%;
-    background-color: #a72c2c;
-    border-bottom: 4px solid #000000;
-    
+#header {
+    width: auto; 
+    background-color: #a72c2c; 
+    height: 75px; 
+    display: flex; 
+    justify-content: space-between; 
+    padding-bottom: 10px;
 }
 
-#img_header{
-    width: 150px;
-    height: 70PX;
-    padding-left: 40px;
-    padding-right: 10px;
+#img_logo{
+    margin-left: 25px;
 }
 
-#titulo{
-    font-size: 21px;
-    font-family: 'DM Sans', sans-serif; 
-    padding-top: 24px ;
-    width: 300px;
-    text-align: center;
-    color: #fff;
+#logo{
+    margin-left: 25px;
 }
 
 #nav_re { 
     width: 380px;
-    padding-left: 900px;
 }
 
 #nav_ul { 
@@ -56,7 +47,7 @@ body{
 .a_nav {
     width: 50px;
     padding: 10px;
-    font-size: 25px; 
+    font-size: 22px; 
     font-family: 'Poppins', sans-serif;
     text-decoration: none; 
     transition: all 0.2s ease 0s; 
@@ -64,17 +55,18 @@ body{
 }
 
 .a_nav:link { 
-    color: #000; 
+    color: #fff; 
 }
 
 .a_nav:visited { 
-    color: #000; 
+    color: #fff; 
 }
 
 .a_nav:hover { 
-    color: #fff; 
-    background-color: #000;
+    color: #000; 
+    background-color: #fff;
 }
+
 #contenido_princ{
     color: #000;
     font-family: 'DM Sans', sans-serif;
@@ -84,8 +76,6 @@ body{
     padding: 0;
     width: 100%;
     height: 480px;
-
-   
 
 }
 
@@ -115,25 +105,23 @@ body{
     }
 
 
-
 .pqrs{
-    margin: 40px auto;
-    text-align: center;
+   
+        width: 200px;
+        height: 100px;
+        padding-left: 100px;
+        padding-top: 670px;
+        cursor: pointer;
+        
+           
+}
     
-   }
-  
-   .pqrs img{
-    width: 120px;
-    margin: 0 20px;
-    cursor: pointer;
-    border-radius: 10px;
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    padding-bottom: 85px;
-    left: 1625px;
-
-   }
+.pqrs i{
+        color: #000000;
+        font-size: 60px;
+        border-radius: 30px;
+        box-shadow: 0 0 20px 9px rgb(160, 160, 160);
+}   
    .check-box{
     margin: 10px 11px 15px 0;
    }
@@ -154,6 +142,3 @@ body{
         margin-right: 20px;
         font-size: 25px;
 }
-
-
-
