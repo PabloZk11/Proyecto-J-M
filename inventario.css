@@ -65,7 +65,7 @@
 
 #table_inv{
     font-size: 30px;
-    width: 950px;
+    width: 1150px;
     margin: auto;
     padding: 0;
     background-color: #463c3c;
@@ -99,6 +99,7 @@
 #nom_table{
     width: 325px;
 }
+
 
 .fila_i{
     background-color: #B6B4B9;
@@ -161,4 +162,39 @@
 
 #but_ag:hover{
     color: #fff;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 23px;
+    background-color: #47b34e ;
+    border-radius: 40px;
+}
+
+.switch::after{
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+    background-color: #DDDBE1;
+    left: 3px;
+    top: 3px;
+    transition: all 0.3s ease;
+}
+
+input[type='checkbox']:checked + .switch::after{
+    transform: translate(17px);
+    background-color: #000;
+}
+
+input[type='checkbox']:checked + .switch{
+    background-color: #2a8994 ;
+}
+
+.offscreen{
+    position: absolute;
+    left: -99999px;
 }
