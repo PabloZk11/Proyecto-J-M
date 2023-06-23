@@ -162,33 +162,21 @@
     margin: auto;
     font-family: 'Poppins';
 }
-
-#pqrs_se{
-    display: flex;
-    justify-content: end;
+.pqrs{
+    position: absolute;
+    position: fixed;
+    bottom: 95px;
+    right: 50px;
+    cursor: pointer;
 }
 
-#icon_pqrs{
-    font-size: 50px;
-    margin: 10px;
-    margin-top: 20px;
-    color: #000;
-}
-
-#icon_pqrs:link{
-    font-size: 50px;
-    margin: 10px;
-    margin-top: 130px;
-    color: #000;
-}
-
-#icon_pqrs:visited{
-    font-size: 50px;
-    margin: 10px;
-    margin-top: 130px;
-    color: #000;
-}
-
-#icon_pqrs:active{
-    color: #000;
+.pqrs i{
+    color: #000000;
+    font-size: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+    transition: opacity .15s
+}   
+.check-box{
+margin: 10px 11px 15px 0;
 }

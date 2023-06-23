@@ -145,7 +145,24 @@
     color: #fff;
     background-color: #516faf;
 }
+.pqrs{
+    position: absolute;
+    position: fixed;
+    bottom: 95px;
+    right: 50px;
+    cursor: pointer;
+}
 
+.pqrs i{
+    color: #000000;
+    font-size: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+    transition: opacity .15s
+}   
+.check-box{
+margin: 10px 11px 15px 0;
+}
 
 #footer{
     color: #ffffff;
