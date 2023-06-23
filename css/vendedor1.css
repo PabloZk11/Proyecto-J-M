@@ -324,10 +324,14 @@ body a{
 
 #foot{
     width: auto; 
-    background-color: #a72c2c; 
+    margin-top: 218px ;
+    background-color: #000; 
     height: 75px; 
     display: flex; 
     justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 #derechos{
@@ -335,7 +339,7 @@ body a{
     font-size: 22px;
     margin: auto;
     font-family: 'Poppins';
-}
+}   
 
 /*Pqrs*/
 
