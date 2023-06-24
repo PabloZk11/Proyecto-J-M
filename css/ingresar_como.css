@@ -199,8 +199,6 @@
     display: none;
 }
 
-
-
 @media screen and (max-width: 850px){
 
     main{
@@ -270,4 +268,22 @@ margin: 10px 11px 15px 0;
     font-size: 22px;
     margin: auto;
     font-family: 'Poppins';
+}
+
+.entrar{
+    color: #000;
+    transition: all .25s ease;
+    text-decoration: none;
+}
+
+.entrar:link{
+    color: #000;
+}
+
+.entrar:visited{
+    color: #000;
+}
+
+.entrar:hover{
+    color: #c23434;
 }

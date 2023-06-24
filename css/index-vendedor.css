@@ -204,11 +204,16 @@ body a{
 
 
 /* Menu  */
+
+.menu_nav{
+    display: flex;
+}
+
 .sidebar{
     position: flex;
     background: #92000A;
-    width: 400px;
-    height: auto;
+    width: 275px;
+    height: 80%;
     top: 5%;
     left: 0;
     z-index: 1;
@@ -229,43 +234,40 @@ body a{
     margin: 25px 0;
 }
 
-.sidebar ul li a{
-    color: #ffffff;
-    padding: 0 30px;
+.sidebar ul li label{
+    cursor: pointer;
+}
 
+#li_cerrar{
+    margin-top: 190%;
 }
-.sidebar ul li a:hover{
+
+.sidebar ul li a{
     color: #fff;
-    margin-left: 20px;
-    transition: 0.4s;
+    padding: 0 30px;
+    transition: all 0.25s ease;
 }
+
+.sidebar ul li a:hover{
+    color: #000;
+    margin-left: 20px;
+}
+
 
 /* Menu Fin */
-
-/*Cerrar Sesión*/
-
-.exit {
-    color: #ffffff;
-
-}
-.exit a:hover{
-    color: #000000;
-    margin-left: 20px;
-    transition: 0.4s;
-}
-
-/*Cerrar Sesión*/
 
 /* Contenido  */
 
 .apart{
     display: flex;
+    height: autopx;
 }
 
 .main{
-    margin-left: 150px;
+    margin: auto;
+    margin-top: 85px;
     padding: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
 .main h2{
@@ -296,13 +298,13 @@ body a{
 }
 
 #btnav{
-	width: 180px;
-	height: 180px;
+	width: 205px;
+	height: 205px;
     background-color: white;
-    border-radius: 50px;
     font-family: arial black;
     color: #a72c2c;
     border: 2px solid #92000A;
+    border-radius: 150px;
 	margin: 20px;
 }
 
@@ -332,6 +334,7 @@ body a{
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 10;
 }
 
 #derechos{
