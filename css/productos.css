@@ -7,6 +7,9 @@
 body{
     background-color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    position: relative;
+    min-height: 100vh;
+
 }
 
 body a{
@@ -74,69 +77,6 @@ body a{
 
 /*Navegacion fin*/
 
-/*:::Ventana Modal Ventas:::*/
-#btn-modal-ventas{
-    display: none;
-}
-.container-modal-ventas{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0; left: 0;
-    background-color: rgba(144, 148, 150, 0.603);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-}
-#btn-modal-ventas:checked ~ .container-modal-ventas{
-    display: flex;
-}
-.content-modal-ventas{
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 4px;
-}
-.content-modal-ventas h2{
-    margin-bottom: 15px;
-}
-.content-modal-ventas p{
-    padding: 15px 0px;
-    border-top: 1px solid #dbdbdb;
-    border-bottom: 1px solid #dbdbdb;
-}
-.content-modal-ventas .btn-cerrar-ventas{
-    width: 100%;
-    margin-top: 15px;
-    display: flex;
-    justify-content: flex-end;
-}
-.content-modal-ventas .btn-cerrar-ventas label{
-    padding: 7px 10px;
-    background-color: #a72c2c;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 300ms ease;
-}
-.content-modal-ventas .btn-cerrar-ventas label:hover{
-    background-color:#92000A;
-}
-.cerrar-modal-ventas{
-    width:100%;
-    height: 100vh;
-    position: absolute;
-    top:0; left: 0;
-    z-index: -1;
-}
-@media screen and (max-width:800px) {
-    .content-modal-ventas{
-        width: 90%;
-    }
-}
-/*:::Fin Ventana Modal Ventas:::*/
 
 /*:::Ventana Modal:::*/
 #btn-modal{
@@ -207,11 +147,16 @@ body a{
 .sidebar{
     position: flex;
     background: #92000A;
-    width: 400px;
-    height: auto;
-    top: 5%;
+    width: 275px;
+    height: 90vh;
     left: 0;
     z-index: 1;
+}
+
+.menu_nav{
+    display: flex;
+    flex-direction: column;
+    height: 10REM;
 }
 
 .sidebar h2{
@@ -226,18 +171,22 @@ body a{
 }
 
 .sidebar ul li {
-    margin: 25px 0;
+    margin: 15px 0;
+}
+
+.sidebar ul li label{
+    cursor: pointer;
 }
 
 .sidebar ul li a{
-    color: #ffffff;
-    padding: 0 30px;
-
-}
-.sidebar ul li a:hover{
     color: #fff;
+    padding: 0 30px;
+    transition: all 0.25s ease;
+}
+
+.sidebar ul li a:hover{
+    color: #000;
     margin-left: 20px;
-    transition: 0.4s;
 }
 
 /* Menu Fin */
@@ -258,10 +207,12 @@ body a{
 
 /* Contenido  */
 
-.cont{
+#cont_table{
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .apart{
@@ -296,7 +247,7 @@ body a{
     display: flex;
     color: #000;
     font-size: 40px;
-    margin: 10px;
+    margin: 20px;
     justify-content: center;
 }
 
@@ -323,9 +274,10 @@ body a{
     width: 65px;
 }
 
-#nom_table{
-    width: 325px;
+.tits_table{
+    padding: 15px;
 }
+
 
 
 .fila_i{
@@ -345,6 +297,10 @@ body a{
 .btn-edit{
     width: 85px;
     height: 30px;
+}
+
+.td_edit{
+    padding: 12px;
 }
 
 #ag_prod{
@@ -413,11 +369,14 @@ input[type='checkbox']:checked + .switch{
 /*Footer*/  
 
 #foot{
-    width: auto; 
-    background-color: #a72c2c; 
+    background-color: #000; 
     height: 75px; 
     display: flex; 
     justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2 ;
 }
 
 #derechos{
@@ -425,7 +384,7 @@ input[type='checkbox']:checked + .switch{
     font-size: 22px;
     margin: auto;
     font-family: 'Poppins';
-}
+}   
 
 /*Pqrs*/
 .pqrs{

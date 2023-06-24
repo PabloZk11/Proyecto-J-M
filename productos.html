@@ -4,66 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/20420209b7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/inventario.css">
+    <link rel="stylesheet" href="css/productos.css">
     <script src="script.java"></script>
-    <title>Inventario</title>
+    <title>Productos</title>
 </head>
 <body>
     <header id="header">
-        <img src="img/logo.png" alt="" id="logo">
+        <img src="imagenes/logo.png" alt="" id="logo">
         <nav id="nav_re">
         </nav>
     </header>
 
     <main class="apart">
         <div class="sidebar">
-        <h2>Menu</h2>
-        <ul class="nav">
-            <li class="exit">
-                <a href="vendedor1.html">
-                    <i class="fa-sharp fa-solid fa-house"></i>
-                    <span>Inicio</span>
-                </a>
-            </li>
-            <li class="exit">
-                <a href="#">
-                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                    <label for="btn-modal-ventas">
-                        Ventas
-                    </label>
-                </a>
-            </li>
-            <li class="exit">
-                <a href="dsc/Informe Ventas - Vendedor 1.docx" download="Informe Ventas - Vendedor 1">
-                    <i class="fa-solid fa-file"></i>
-                    <span>Generar Informe</span>
-                 </a>
-            </li>
-            <li></li><li></li><li></li><li></li><li></li>
-            <li class="exit">
-                <a href="#">
-                    <i class="fa-regular fa-circle-xmark"></i>
-                    <label for="btn-modal">
-                        Cerrar sesión
-                    </label>
-                </a>
-            </li>
-        </ul>
+            <h2>Menu</h2>
+            <ul class="menu_nav">
+                <li>
+                    <a href="vendedor1.html" class="but_menu">
+                        <i class="fas fa-server"></i>
+                        <label for="btn-modal-ventas">
+                            Inicio
+                        </label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="but_menu">
+                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        <label for="btn-modal-ventas">
+                            Ventas
+                        </label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="but_menu">
+                        <i class="fa-solid fa-file"></i>
+                        <label for="btn-modal-ventas">
+                            Generar Informe
+                        </label>
+                    </a>
+                </li>
+                <li id="li_cerrar">
+                    <a href="#" class="but_menu">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                        <label for="btn-modal">
+                            Cerrar sesión
+                        </label>
+                    </a>
+                </li>
+            </ul>
         </div>
-
-    <!--Ventana Modal Cierre Advertencia-->
-    <input type="checkbox" id="btn-modal-ventas">
-    <div class="container-modal-ventas">
-        <div class="content-modal-ventas">
-            <h2>¡Advertencia!</h2>
-            <p>Para ingresar a este apartado se tiene que seleccionar un perfil de usuario.</p>
-            <div class="btn-cerrar-ventas" >
-                <label for="btn-modal-ventas" >Cerrar</label>
-            </div>
-        </div>
-        <label for="btn-modal-ventas" class="cerrar-modal-ventas"></label>
-    </div>
-    <!--Fin de Ventana Modal Advertencia-->
 
     <!--Ventana Modal Cierre Sesión-->
     <input type="checkbox" id="btn-modal">
@@ -79,20 +68,20 @@
     </div>
     <!--Fin de Ventana Modal-->
 
-    <section>
+    <section id="cont_table">
         <div class="cont">
-            <h2 class="title">Inventario</h2>
+            <h2 class="title">Productos</h2>
             <section>
                 <table id="table_inv">
                     <thead>
                         <tr>
-                            <th id="id_table">ID</th>
-                            <th id="nom_table">Nombre</th>
-                            <th>Precio</th>
-                            <th id="uni">Unidades</th>
-                            <th>Fecha</th>
-                            <th>Editar</th>
-                            <th>Estado</th>
+                            <th class="tits_table">ID</th>
+                            <th class="tits_table">Nombre</th>
+                            <th class="tits_table">Precio Compra</th>
+                            <th class="tits_table">Precio Venta</th>
+                            <th class="tits_table">Stock Actual</th>
+                            <th class="tits_table">Editar</th>
+                            <th class="tits_table">Estado</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -100,10 +89,10 @@
                             <td>01</td>
                             <td class="text_filas">Libreta Block de
                                 Dibujo Profesional </td>
-                            <td class="text_filas">$ 18.000</td>
+                            <td class="text_filas">$ 18,000</td>
+                            <td class="text_filas">$ 21,000</td>
                             <td class="text_filas">20</td>
-                            <td class="text_filas">26/03/2023</td>
-                            <td><button class="btn-edit">Editar</button></td>
+                            <td class="td_edit"><button class="btn-edit">Editar</button></td>
                             <td class="cont_toogle">
                                 <input type="checkbox" id="toogle" class="offscreen">
                                 <label for="toogle" class="switch"></label>
@@ -112,10 +101,10 @@
                         <tr class="fila_p">
                             <td class="text_filas">02</td>
                             <td class="text_filas">Lápices de colores</td>
-                            <td class="text_filas">$12,500</td>
+                            <td class="text_filas">$ 12,500</td>
+                            <td class="text_filas">$ 15,000</td>
                             <td class="text_filas">50</td>
-                            <td class="text_filas">10/05/2023</td>
-                            <td><button class="btn-edit">Editar</button></td>
+                            <td class="td_edit"><button class="btn-edit">Editar</button></td>
                             <td class="cont_toogle">
                                 <input type="checkbox" id="toogle2" class="offscreen">
                                 <label for="toogle2" class="switch"></label>
@@ -124,10 +113,10 @@
                         <tr class="fila_i">
                             <td class="text_filas">03</td>
                             <td class="text_filas">Cuaderno de notas</td>
-                            <td class="text_filas">$6,990</td>
+                            <td class="text_filas">$ 6,990</td>
+                            <td class="text_filas">$ 8,000 </td>
                             <td class="text_filas">30</td>
-                            <td class="text_filas">05/02/2023</td>
-                            <td><button class="btn-edit">Editar</button></td>
+                            <td class="td_edit"><button class="btn-edit">Editar</button></td>
                             <td class="cont_toogle">
                                 <input type="checkbox" id="toogle3" class="offscreen">
                                 <label for="toogle3" class="switch"></label>
@@ -136,10 +125,10 @@
                         <tr class="fila_p">
                             <td class="text_filas">04</td>
                             <td class="text_filas">Pincel redondo</td>
-                            <td class="text_filas">$8,750</td>
+                            <td class="text_filas">$ 8,750</td>
+                            <td class="text_filas">$ 9,200</td>
                             <td class="text_filas">15</td>
-                            <td class="text_filas">18/07/2023</td>
-                            <td><button class="btn-edit">Editar</button></td>
+                            <td class="td_edit"><button class="btn-edit">Editar</button></td>
                             <td class="cont_toogle">
                                 <input type="checkbox" id="toogle4" class="offscreen">
                                 <label for="toogle4" class="switch"></label>
@@ -148,10 +137,10 @@
                         <tr class="fila_i">
                             <td class="text_filas">05</td>
                             <td class="text_filas">Set de marcadores</td>
-                            <td class="text_filas">$24,990</td>
+                            <td class="text_filas">$ 24,990</td>
+                            <td class="text_filas">$ 27,000</td>
                             <td class="text_filas">10</td>
-                            <td class="text_filas">02/11/2023</td>
-                            <td><button class="btn-edit">Editar</button></td>
+                            <td class="td_edit"><button class="btn-edit">Editar</button></td>
                             <td class="cont_toogle">
                                 <input type="checkbox" id="toogle5" class="offscreen">
                                 <label for="toogle5" class="switch"></label>
@@ -164,6 +153,7 @@
                 <a href="" id="but_ag">Agregar Producto</a>
             </section>
         </div>
+    </section>
     </main>
     <div class="pqrs">
         <i class="fa-solid fa-circle-exclamation fa-beat"></i>
