@@ -132,6 +132,31 @@ body{
     font-family: 'Poppins';
 }
 
+#but_repo{
+    margin: auto;
+    margin-top: 20px;
+    padding: 15px ;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #92000A;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.25s ease;
+}
+
+#but_repo:link{
+    color: #000;
+}
+
+#but_repo:visited{
+    color: #000;
+}
+
+#but_repo:hover{
+    color: #fff;
+}
+
 .pqrs{
     position: absolute;
     position: fixed;

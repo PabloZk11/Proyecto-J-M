@@ -252,17 +252,23 @@ body a{
 }
 
 #div_buscador{
+    display: flex;
     width: 97%;
     margin: auto;
     padding: 15px;
+}
+
+#div_buscador img{
+    width: 40px;
+    margin-right: 15px;
 }
 
 #buscador{
     width: 99%;
     height: 25px;
     padding: 5px;
-    background-color: #948c8c;
-    color: #fff;
+    background-color: #d3cece;
+    color: #000;
     border: 2px solid #000;
 }
 
@@ -332,6 +338,7 @@ body a{
     padding: 15px;
     padding-left: 35px;
     padding-right: 35px;
+    margin: 15px;
     background-color: #0d29a5;
     text-decoration: none;
     border-radius: 7px;
