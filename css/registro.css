@@ -5,6 +5,7 @@
 #header {
     width: auto; 
     background-color: #a72c2c; 
+    border-bottom: 2px solid #000000;
     height: 75px; 
     display: flex; 
     justify-content: space-between; 
@@ -12,8 +13,9 @@
 }
 
 #logo{
-    margin-left: 25px;
+    margin-left: 15px;
 }
+
 
 #nav_re { 
     width: 380px;
@@ -53,115 +55,205 @@
     background-color: #fff;
 }
 
-#tit_re{
-    text-align: center;
-    margin-top: 15px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 35px;
-    color: #a72c2c;
+.contenedor__todo{
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    margin: 126px;
+    padding-left: 400px;
+    position: relative;
+    
+
 }
 
-#sec_re{
+
+.recordar{
+    margin: -5px 0 20px 5px;
+    color: rgb(12, 12, 12);
+    cursor: pointer;
+    
+  }
+  
+  .recordar:hover{
+    text-decoration: underline;
+  }
+  
+  #recordar{
+    margin:  0px 5;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    padding-bottom:30px ;
+    padding-top: 20px;
+  }
+
+.caja__trasera{
+    width: 100%;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(18, 118, 233, 0.301);
+
 }
 
-#form_re{
-    margin: auto;
-    margin-left: 1%;
-    margin-top: 5%;
-    padding: 25px;
-    width: 350px;
-    height: 450px;
-    margin-right: 260px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 7px;
-    background-color: rgba(172, 42, 42, 0.933);
+.caja__trasera div{
+    margin: 90px 80px;
+    color: rgb(0, 0, 0);
+    transition: all 500ms;
 }
 
-#form_re label{
-    font-size: 22px;
-    font-family: 'Poppins' ;
+
+.caja__trasera div p,
+.caja__trasera button{
+    margin-top: 30px;
+    
+    
+}
+
+.caja__trasera div h3{
+    font-weight: 400;
+    font-size: 30px;
+    padding-left: 40px;
     margin: 5px;
-    color: #fff;
 }
 
-#form_re label input{
-    background: none;
+.caja__trasera div p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px;
+    padding-left: 33px;
+}
+
+.caja__trasera button{
+    padding: 13px 30px;
+    border: 2px solid #2e0c0c;
+    font-size: 16px;
+    background: rgb(226, 226, 226);
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    outline: none;
+    transition: all 300ms;
+        
+}
+
+.caja__trasera button:hover{
+    background: #fff;
+    color: #db0e0e;
+    padding-left:35px;
+    
+}
+
+/*Formularios*/
+
+.contenedor__login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -210px;
+    left: 10px;
+
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login-register form{
+    width: 100%;
+    padding: 50px 50px;
+    background: linear-gradient(#ebe4e4, #acaaaa);  
+    position: absolute;
+    border-radius: 20px;
+}
+
+
+.contenedor__login-register form h2{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #020202;
+    padding-left: 30px;
+}
+
+.contenedor__login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
     border: none;
-}
-
-.inp_re{
-    background-color: rgba(177, 52, 52, 0.933);
-    border: none;
-    border-bottom: 2.5px #000 solid;
-    padding-bottom: 5px;
-    padding-left: 3px;
-    color: #fff;
-    font-size: 18px;
-}
-
-.inp_re:focus{
+    background: #F2F2F2;
+    font-size: 16px;
     outline: none;
 }
 
-#but_re{
-    margin: auto;
-    padding: 10px;
-    padding-left: 90px;
-    padding-right: 90px;
-    background-color: #fff;
-    border: #000 solid 1.5px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.1s ease;
-    font-family: 'Poppins';
-    font-size: 22px;
+.contenedor__login-register form button{
+    padding: 10px 40px;
+    margin-top: 35px;
+    border: none;
+    font-size: 18px;
+    background: linear-gradient(#dfd7d7,#696868); 
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    outline: none;
+   
 }
 
-#re_co{
-    color: #18e74c;
-    visibility: hidden;
-    opacity: 0;
+.contenedor__login-register form button:hover{
+    background: linear-gradient(#696868, #dfd7d7);
+    color: #faf9f9;
+
+    
 }
 
-#but_re:link{
-    color: #000;
-}
 
-#but_re:visited + #re_co{
-    visibility: visible;
+
+
+.formulario__login{
     opacity: 1;
+    display: block;
+}
+.formulario__register{
+    display: none;
 }
 
-#but_re:visited{
-    color: #000;
+
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*Formularios*/
+
+    .contenedor__login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor__login-register form{
+        position: relative;
+    }
+
 }
 
-#but_re:hover{
-    color: #fff;
-    background-color: #516faf;
-}
 
-#robot{
-    width: 420px;
-}
-
-#foot{
-    width: auto; 
-    background-color: #a72c2c; 
-    height: 75px; 
-    display: flex; 
-    justify-content: center;
-}
-
-#derechos{
-    color: #fff;
-    font-size: 22px;
-    margin: auto;
-    font-family: 'Poppins';
-}
 .pqrs{
     position: absolute;
     position: fixed;
@@ -177,6 +269,23 @@
     overflow: hidden;
     transition: opacity .15s
 }   
-.check-box{
-margin: 10px 11px 15px 0;
+
+
+#footer{
+    color: #ffffff;
+    background-color: #353434;
+    border-top: 2px solid #363636;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
 }
+  
+#derechos{
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
