@@ -62,29 +62,8 @@
     margin: 126px;
     padding-left: 400px;
     position: relative;
-    
 
 }
-
-
-.recordar{
-    margin: -5px 0 20px 5px;
-    color: rgb(12, 12, 12);
-    cursor: pointer;
-    
-  }
-  
-  .recordar:hover{
-    text-decoration: underline;
-  }
-  
-  #recordar{
-    margin:  0px 5;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
-    padding-bottom:30px ;
-    padding-top: 20px;
-  }
 
 .caja__trasera{
     width: 100%;
@@ -93,13 +72,13 @@
     justify-content: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(18, 118, 233, 0.301);
+    background-color: rgb(0, 0, 0);
 
 }
 
 .caja__trasera div{
-    margin: 90px 80px;
-    color: rgb(0, 0, 0);
+    margin: 100px 40px;
+    color: white;
     transition: all 500ms;
 }
 
@@ -107,42 +86,33 @@
 .caja__trasera div p,
 .caja__trasera button{
     margin-top: 30px;
-    
-    
 }
 
 .caja__trasera div h3{
     font-weight: 400;
-    font-size: 30px;
-    padding-left: 40px;
-    margin: 5px;
+    font-size: 28px;
 }
 
 .caja__trasera div p{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 300;
-    margin: 10px;
-    padding-left: 33px;
 }
 
 .caja__trasera button{
-    padding: 13px 30px;
-    border: 2px solid #2e0c0c;
+    padding: 10px 40px;
+    border: 2px solid #fff;
     font-size: 16px;
-    background: rgb(226, 226, 226);
+    background: transparent;
     font-weight: 600;
     cursor: pointer;
-    color: rgb(0, 0, 0);
+    color: white;
     outline: none;
     transition: all 300ms;
-        
 }
 
 .caja__trasera button:hover{
     background: #fff;
-    color: #db0e0e;
-    padding-left:35px;
-    
+    color: #bd2823;
 }
 
 /*Formularios*/
@@ -153,7 +123,7 @@
     width: 100%;
     max-width: 380px;
     position: relative;
-    top: -210px;
+    top: -185px;
     left: 10px;
 
     /*La transicion va despues del codigo JS*/
@@ -162,19 +132,17 @@
 
 .contenedor__login-register form{
     width: 100%;
-    padding: 50px 50px;
-    background: linear-gradient(#ebe4e4, #acaaaa);  
+    padding: 60px 20px;
+    background: rgb(212, 211, 211);
     position: absolute;
     border-radius: 20px;
 }
 
-
 .contenedor__login-register form h2{
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
-    margin-bottom: 35px;
-    color: #020202;
-    padding-left: 30px;
+    margin-bottom: 20px;
+    color: #000000;
 }
 
 .contenedor__login-register form input{
@@ -189,22 +157,14 @@
 
 .contenedor__login-register form button{
     padding: 10px 40px;
-    margin-top: 35px;
+    margin-top: 40px;
     border: none;
-    font-size: 18px;
-    background: linear-gradient(#dfd7d7,#696868); 
+    font-size: 16px;
+    background: #ac3737;
     font-weight: 600;
     cursor: pointer;
-    color: rgb(0, 0, 0);
+    color: white;
     outline: none;
-   
-}
-
-.contenedor__login-register form button:hover{
-    background: linear-gradient(#696868, #dfd7d7);
-    color: #faf9f9;
-
-    
 }
 
 
@@ -250,9 +210,7 @@
     .contenedor__login-register form{
         position: relative;
     }
-
 }
-
 
 .pqrs{
     position: absolute;
@@ -288,4 +246,3 @@
     margin-right: 20px;
     font-size: 18px;
 }
-
