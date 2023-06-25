@@ -60,31 +60,10 @@
     width: 100%;
     max-width: 800px;
     margin: 126px;
-    padding-left: 270px;
+    padding-left: 400px;
     position: relative;
-    
 
 }
-
-
-.recordar{
-    margin: -5px 0 20px 5px;
-    color: rgb(12, 12, 12);
-    cursor: pointer;
-    
-  }
-  
-  .recordar:hover{
-    text-decoration: underline;
-  }
-  
-  #recordar{
-    margin:  0px 5;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
-    padding-bottom:30px ;
-    padding-top: 20px;
-  }
 
 .caja__trasera{
     width: 100%;
@@ -93,13 +72,13 @@
     justify-content: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(189, 186, 186, 0.5);
+    background: linear-gradient(#070707, #2c2c2c);
 
 }
 
 .caja__trasera div{
-    margin: 100px 60px;
-    color: rgb(0, 0, 0);
+    margin: 100px 40px;
+    color: white;
     transition: all 500ms;
 }
 
@@ -111,29 +90,29 @@
 
 .caja__trasera div h3{
     font-weight: 400;
-    font-size: 26px;
+    font-size: 29px;
 }
 
 .caja__trasera div p{
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 300;
 }
 
 .caja__trasera button{
     padding: 10px 40px;
-    border: 2px solid #000000;
-    font-size: 14px;
+    border: 2px solid #fff;
+    font-size: 16px;
     background: transparent;
     font-weight: 600;
     cursor: pointer;
-    color: rgb(44, 22, 22);
+    color: rgb(253, 253, 253);
     outline: none;
     transition: all 300ms;
 }
 
 .caja__trasera button:hover{
     background: #fff;
-    color: #db0e0e;
+    color: #0212f8;
 }
 
 /*Formularios*/
@@ -144,7 +123,7 @@
     width: 100%;
     max-width: 380px;
     position: relative;
-    top: -185px;
+    top: -200px;
     left: 10px;
 
     /*La transicion va despues del codigo JS*/
@@ -153,8 +132,8 @@
 
 .contenedor__login-register form{
     width: 100%;
-    padding: 80px 20px;
-    background: linear-gradient(#f3f3f3, #272727);  
+    padding: 120px 30px;
+    background: rgb(212, 211, 211);
     position: absolute;
     border-radius: 20px;
 }
@@ -163,7 +142,7 @@
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
-    color: #020202;
+    color: #000000;
 }
 
 .contenedor__login-register form input{
@@ -180,11 +159,11 @@
     padding: 10px 40px;
     margin-top: 40px;
     border: none;
-    font-size: 14px;
-    background: linear-gradient(#a8a7a7, #fffafa); 
+    font-size: 18px;
+    background: #384ba0;
     font-weight: 600;
     cursor: pointer;
-    color: rgb(26, 26, 26);
+    color: rgb(253, 251, 251);
     outline: none;
 }
 
@@ -198,6 +177,8 @@
 .formulario__register{
     display: none;
 }
+
+
 
 @media screen and (max-width: 850px){
 
@@ -229,7 +210,6 @@
     .contenedor__login-register form{
         position: relative;
     }
-
 }
 
 .pqrs{
@@ -277,13 +257,13 @@ margin: 10px 11px 15px 0;
 }
 
 .entrar:link{
-    color: #000;
+    color: #ffffff;
 }
 
 .entrar:visited{
-    color: #000;
+    color: #ffffff;
 }
 
 .entrar:hover{
-    color: #c23434;
+    color: #fdfdfd;
 }
