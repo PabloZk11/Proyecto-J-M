@@ -251,6 +251,25 @@ body a{
     justify-content: center;
 }
 
+#div_buscador{
+    width: 97%;
+    margin: auto;
+    padding: 15px;
+}
+
+#buscador{
+    width: 99%;
+    height: 25px;
+    padding: 5px;
+    background-color: #948c8c;
+    color: #fff;
+    border: 2px solid #000;
+}
+
+#buscador::placeholder{
+    color: #000;
+}
+
 #table_inv thead{
     background-color: #a74343;
     border: #000 2px solid;
