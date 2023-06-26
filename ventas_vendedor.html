@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/20420209b7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/productos_vendedor.css">
+    <link rel="stylesheet" href="css/ventas_vendedor.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <title>Productos</title>
 </head>
@@ -21,17 +21,17 @@
             <ul class="menu_nav">
                 <li>
                     <a href="vendedor1.html" class="but_menu">
-                        <i class="fas fa-server"></i>
+                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
                         <label for="btn-modal-ventas">
                             Inicio
                         </label>
                     </a>
                 </li>
                 <li>
-                    <a href="ventas_vendedor.html" class="but_menu">
-                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                    <a href="productos_vendedor.html" class="but_menu">
+                        <i class="fas fa-server"></i>
                         <label for="btn-modal-ventas">
-                            Ventas
+                            Productos
                         </label>
                     </a>
                 </li>
@@ -70,11 +70,23 @@
 
     <section id="cont_table">
         <div class="cont">
-            <h2 class="title">Productos</h2>
-            <div id="div_buscador">
-                <img src="/imagenes/Lupa.png" alt="">
-                <input type="text" id="buscador" placeholder="Busca algun producto">
+            <h2 class="title">Ventas</h2>   
+
+            <div class="but_cont">
+                <section id="ag_prod">
+                    <a href="#" id="but_ag">Añadir venta</a>
+                </section>
+                <section id="ag_prod">
+                    <a href="#" id="but_ag">Filtro</a>
+                </section>
+                <section id="ag_prod">
+                    <a href="#" id="but_ag">Generar Informe</a>
+                </section>
+                <section id="ag_prod">
+                    <a href="#" id="but_ag">Imprimir ultima venta</a>
+                </section>
             </div>
+
 
             <section>
                 <table id="table_inv">
@@ -82,10 +94,9 @@
                         <tr>
                             <th class="tits_table">ID</th>
                             <th class="tits_table">Nombre</th>
-                            <th class="tits_table">Precio Compra</th>
-                            <th class="tits_table">Precio Venta</th>
-                            <th class="tits_table">Stock Actual</th>
-                            <th class="tits_table">Estado</th>
+                            <th class="tits_table">Cantidad</th>
+                            <th class="tits_table">Valor Compra</th>
+                            <th class="tits_table">Fecha</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -93,64 +104,51 @@
                             <td>01</td>
                             <td class="text_filas">Libreta Block de
                                 Dibujo Profesional </td>
-                            <td class="text_filas">$ 18,000</td>
+                            <td class="text_filas">2</td>
                             <td class="text_filas">$ 21,000</td>
-                            <td class="text_filas">20</td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle" class="offscreen">
-                                <label for="toogle" class="switch"></label>
-                            </td>
+                            <td class="text_filas">25/06/2023</td>
+
                         </tr>
                         <tr class="fila_p">
                             <td class="text_filas">02</td>
                             <td class="text_filas">Lápices de colores</td>
-                            <td class="text_filas">$ 12,500</td>
+                            <td class="text_filas">2+2</td>
                             <td class="text_filas">$ 15,000</td>
-                            <td class="text_filas">50</td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle2" class="offscreen">
-                                <label for="toogle2" class="switch"></label>
-                            </td>
+                            <td class="text_filas">25/06/2023</td>
+
                         </tr>
                         <tr class="fila_i">
                             <td class="text_filas">03</td>
                             <td class="text_filas">Cuaderno de notas</td>
-                            <td class="text_filas">$ 6,990</td>
+                            <td class="text_filas">1</td>
                             <td class="text_filas">$ 8,000 </td>
-                            <td class="text_filas">30</td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle3" class="offscreen">
-                                <label for="toogle3" class="switch"></label>
-                            </td>
+                            <td class="text_filas">25/06/2023</td>
+
                         </tr>
                         <tr class="fila_p">
                             <td class="text_filas">04</td>
                             <td class="text_filas">Pincel redondo</td>
-                            <td class="text_filas">$ 8,750</td>
+                            <td class="text_filas">3+1</td>
                             <td class="text_filas">$ 9,200</td>
-                            <td class="text_filas">15</td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle4" class="offscreen">
-                                <label for="toogle4" class="switch"></label>
-                            </td>
+                            <td class="text_filas">25/06/2023</td>
+
                         </tr>
                         <tr class="fila_i">
                             <td class="text_filas">05</td>
                             <td class="text_filas">Set de marcadores</td>
-                            <td class="text_filas">$ 24,990</td>
+                            <td class="text_filas">1+2</td>
                             <td class="text_filas">$ 27,000</td>
-                            <td class="text_filas">10</td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle5" class="offscreen">
-                                <label for="toogle5" class="switch"></label>
-                            </td>
+                            <td class="text_filas">25/06/2023</td>
+
                         </tr>
                     </tbody>
                 </table>
             </section>
-            <section id="ag_prod">
-                <a href="#" id="but_ag">Generar Informe</a>
-            </section>
+
+            <div id="div_buscador">
+                <img src="/imagenes/Lupa.png" alt="">
+                <input type="text" id="buscador" placeholder="Busca alguna venta">
+            </div>
         </div>
     </section>
     </main>
