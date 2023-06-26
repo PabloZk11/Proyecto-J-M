@@ -103,7 +103,7 @@ body a{
 
 #img_robot{
     width: 520px;
-    height: 650px;
+    height: 350px;
     margin: 30px;
     padding-left: 110px;
     }
@@ -204,5 +204,8 @@ margin: 10px 11px 15px 0;
         grid-gap:30px;
         padding: 35px 0px;
     }
+footer.pie-pagina {
+    margin-top: 20px;
+}    
 }
 /*pqrs fin*/
