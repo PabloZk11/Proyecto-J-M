@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/20420209b7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="tabla_mercancia.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <title>Productos</title>
+</head>
+<body>
+    <header id="header">
+        <img src="imagenes/logo.png" alt="" id="logo">
+        <nav id="nav_re">
+        </nav>
+    </header>
+
+    <main class="apart">
+        <div class="sidebar">
+            <h2>Menú</h2>
+            <ul class="menu_nav">
+                <li>
+                    <a href="vendedor1.html" class="but_menu">
+                        <i class="fas fa-server"></i>
+                        <label for="btn-modal-ventas">
+                            Inicio
+                        </label>
+                    </a>
+                </li>
+                <li>
+                    <a href="ventas_vendedor.html" class="but_menu">
+                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        <label for="btn-modal-ventas">
+                            Ventas
+                        </label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="but_menu">
+                        <i class="fa-solid fa-file"></i>
+                        <label for="btn-modal-ventas">
+                            Generar informe
+                        </label>
+                    </a>
+                </li>
+                <li id="li_cerrar">
+                    <a href="#" class="but_menu">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                        <label for="btn-modal">
+                            Cerrar sesión
+                        </label>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    <!--Ventana Modal Cierre Sesión-->
+    <input type="checkbox" id="btn-modal">
+    <div class="container-modal">
+        <div class="content-modal">
+            <h2>¡Hasta pronto!</h2>
+            <p>¡Esperamos verte pronto de regreso! Que tengas un excelente día.</p>
+            <div class="btn-cerrar" >
+                <label for="btn-modal" ><a href="index.html">Cerrar</a></label>
+            </div>
+        </div>
+        <label for="btn-modal" class="cerrar-modal"></label>
+    </div>
+    <!--Fin de Ventana Modal-->
+
+    <section id="cont_table">
+        <div class="cont">
+            <h2 class="title">Mercancia</h2>
+            <div id="div_buscador">
+                <img src="/imagenes/Lupa.png" alt="">
+                <input type="text" id="buscador" placeholder="¿Que deseas buscar?">
+            </div>
+
+            <section>
+                <table id="table_inv">
+                    <thead>
+                        <tr>
+                            <th class="tits_table">ID</th>
+                            <th class="tits_table">Nombre mercancia</th>
+                            <th class="tits_table">Nombre Proveedor</th>
+                            <th class="tits_table">Tipo de mercancia</th>
+                            <th class="tits_table">Fecha de Entrega</th>
+                            <th class="tits_table">Precio Total</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="fila_i">
+                            <td>01</td>
+                            <td class="text_filas">Papel FinePrint</td>
+                            <td class="text_filas">Esteban Medez</td>
+                            <td class="text_filas">Papel</td>
+                            <td class="text_filas">20/04/23</td>
+                            <td class="text_filas">$ 40.000</td>
+                            <td class="cont_toogle">
+                        
+                            </td>
+                        </tr>
+                        <tr class="fila_p">
+                            <td class="text_filas">02</td>
+                            <td class="text_filas">Bolígrafos InkMaster</td>
+                            <td class="text_filas">Camilo Lopez</td>
+                            <td class="text_filas">Bolígrafos y lápices</td>
+                            <td class="text_filas">30/05/23</td>
+                            <td class="text_filas">$ 50.000</td>
+                            <td class="cont_toogle">
+                            </td>
+                        </tr>
+                        <tr class="fila_i">
+                            <td class="text_filas">03</td>
+                            <td class="text_filas">Cuadernos NotePerfect</td>
+                            <td class="text_filas">Julian Maldonado</td>
+                            <td class="text_filas">Cuadernos y libretas</td>
+                            <td class="text_filas">15/01/23</td>
+                            <td class="text_filas">$ 65.000</td>
+                            <td class="cont_toogle">
+                            </td>
+                        </tr>
+                        <tr class="fila_p">
+                            <td class="text_filas">04</td>
+                            <td class="text_filas">Carpetas FileGuard</td>
+                            <td class="text_filas">Camilo Lopez</td>
+                            <td class="text_filas">Carpetas y archivadores</td>
+                            <td class="text_filas">10/02/23</td>
+                            <td class="text_filas">$ 55,000</td>
+                            <td class="cont_toogle">
+                            </td>
+                        </tr>
+                        <tr class="fila_i">
+                            <td class="text_filas">05</td>
+                            <td class="text_filas">Organizadores DeskMaster</td>
+                            <td class="text_filas">Julian Maldonado</td>
+                            <td class="text_filas">Organizadores y accesorios</td>
+                            <td class="text_filas">10/36/23</td>
+                            <td class="text_filas">$ 70.000</td>
+                            <td class="cont_toogle">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="ag_prod">
+                <a href="#" id="but_ag">Generar informe</a>
+            </section>
+        </div>
+    </section>
+    </main>
+    <div class="pqrs">
+        <i class="fa-solid fa-circle-exclamation fa-beat"></i>
+        <script src="https://kit.fontawesome.com/2880b366dc.js" crossorigin="anonymous"></script>  
+    </div>
+
+
+    <footer id="foot">
+        <p id="derechos">J&M D.S - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
