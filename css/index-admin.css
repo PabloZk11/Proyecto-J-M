@@ -151,6 +151,7 @@ body a{
     color: #fff;
     padding: 0 30px;
     transition: all 0.25s ease;
+    text-decoration: none;
 }
 
 .sidebar ul li a:hover{
@@ -221,8 +222,10 @@ body a{
     background-color: white;
     border-radius: 150px;
     font-family: arial black;
+    background-image: url(/imagenes/admin.jpg);
+    background-size: cover;
     color: #a72c2c;
-    border: 2px solid #92000A;
+    border: 1.5px solid #2e2828;
 	margin: 20px;
 }
 
