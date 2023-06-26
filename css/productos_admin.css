@@ -303,7 +303,17 @@ body a{
     padding: 15px;
 }
 
+.a_edit{
+    color: #000;
+}
 
+.a_edit:link{
+    color: #000;
+}
+
+.a_edit:visited{
+    color: #000;
+}
 
 .fila_i{
     background-color: #B6B4B9;
