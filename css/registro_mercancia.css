@@ -85,6 +85,7 @@ body a{
     border-radius: 10px;
     padding-top: 15px;
     box-shadow: 0 0 20px 9px rgb(99, 97, 97);
+    margin: 10px;
   }
   
   
@@ -287,19 +288,19 @@ body a{
 
 
 /* Menu  */
-
-.menu_nav{
-    display: flex;
-}
-
 .sidebar{
     position: flex;
     background: #92000A;
     width: 275px;
-    height: 80%;
-    top: 5%;
+    height: 90vh;
     left: 0;
     z-index: 1;
+}
+
+.menu_nav{
+    display: flex;
+    flex-direction: column;
+    height: 10REM;
 }
 
 .sidebar h2{
@@ -314,21 +315,18 @@ body a{
 }
 
 .sidebar ul li {
-    margin: 25px 0;
+    margin: 15px 0;
 }
 
 .sidebar ul li label{
     cursor: pointer;
 }
 
-#li_cerrar{
-    margin-top: 190%;
-}
-
 .sidebar ul li a{
     color: #fff;
     padding: 0 30px;
     transition: all 0.25s ease;
+    text-decoration: none;
 }
 
 .sidebar ul li a:hover{
@@ -336,14 +334,28 @@ body a{
     margin-left: 20px;
 }
 
-
 /* Menu Fin */
+
+/*Cerrar Sesión*/
+
+.exit {
+    color: #ffffff;
+
+}
+.exit a:hover{
+    color: #000000;
+    margin-left: 20px;
+    transition: 0.4s;
+}
+
+/*Cerrar Sesión*/
+
 
 /* Contenido  */
 
 .apart{
     display: flex;
-    height: autopx;
+    height: auto;
 }
 
 .main{

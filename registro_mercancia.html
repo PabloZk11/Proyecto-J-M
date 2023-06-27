@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20420209b7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/registro_mercancia.css">
+    <link rel="stylesheet" href="css/registro_mercancia.css">
 
     <title>Registro Mercancia</title>
 </head>
@@ -21,18 +21,26 @@
 
     <main class="apart">
         <div class="sidebar">
-            <h2>Menu</h2>
-            <ul class="manu_nav">
+            <h2>Menú</h2>
+            <ul class="menu_nav">
                 <li>
-                    <a href="tabla_mercancia.html" class="but_menu">
+                    <a href="index-admin.html" class="but_menu">
                         <i class="fa-solid fa-boxes-stacked"></i>
                         <label for="btn-modal-ventas">
-                            Mercancia
+                            Inicio
                         </label>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="but_menu">
+                    <a href="ventas_admin.html" class="but_menu">
+                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        <label for="btn-modal-ventas">
+                            Ventas
+                        </label>
+                    </a>
+                </li>
+                <li>
+                    <a href="productos_admin.html" class="but_menu">
                         <i class="fas fa-server"></i>
                         <label for="btn-modal-ventas">
                             Productos
@@ -40,7 +48,23 @@
                     </a>
                 </li>
                 <li>
+                    <a href="proveedores.html" class="but_menu">
+                        <i class="fa-solid fa-truck-field"></i>   
+                        <label for="btn-modal-ventas">
+                            Proveedores
+                        </label>
+                    </a>
+                </li>
+                <li id="li_cerrar">
                     <a href="#" class="but_menu">
+                        <i class="fa-solid fa-users"></i>
+                        <label for="btn-modal">
+                            Usuarios
+                        </label>
+                    </a>
+                </li>
+                <li>
+                    <a href="dsc/informe.docx" class="but_menu" download="administrador Informe">
                         <i class="fa-solid fa-file"></i>
                         <label for="btn-modal-ventas">
                             Generar Informe
@@ -48,8 +72,7 @@
                     </a>
                 </li>
                 <li id="li_cerrar">
-                    <a href="#" class="but_menu">5+6
-
+                    <a href="#" class="but_menu">
                         <i class="fa-regular fa-circle-xmark"></i>
                         <label for="btn-modal">
                             Cerrar sesión
@@ -57,7 +80,8 @@
                     </a>
                 </li>
             </ul>
-        </div>
+        </div>  
+
     <!--Ventana Modal Cierre Advertencia-->
     <input type="checkbox" id="btn-modal-ventas">
     <div class="container-modal-ventas">

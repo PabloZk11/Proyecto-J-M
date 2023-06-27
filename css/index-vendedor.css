@@ -204,19 +204,19 @@ body a{
 
 
 /* Menu  */
-
-.menu_nav{
-    display: flex;
-}
-
 .sidebar{
     position: flex;
     background: #92000A;
     width: 275px;
-    height: 80%;
-    top: 5%;
+    height: 90vh;
     left: 0;
     z-index: 1;
+}
+
+.menu_nav{
+    display: flex;
+    flex-direction: column;
+    height: 10REM;
 }
 
 .sidebar h2{
@@ -231,15 +231,11 @@ body a{
 }
 
 .sidebar ul li {
-    margin: 25px 0;
+    margin: 15px 0;
 }
 
 .sidebar ul li label{
     cursor: pointer;
-}
-
-#li_cerrar{
-    margin-top: 190%;
 }
 
 .sidebar ul li a{
@@ -253,8 +249,21 @@ body a{
     margin-left: 20px;
 }
 
-
 /* Menu Fin */
+
+/*Cerrar Sesión*/
+
+.exit {
+    color: #ffffff;
+
+}
+.exit a:hover{
+    color: #000000;
+    margin-left: 20px;
+    transition: 0.4s;
+}
+
+/*Cerrar Sesión*/
 
 /* Contenido  */
 
@@ -325,8 +334,6 @@ body a{
 /*Footer*/  
 
 #foot{
-    width: auto; 
-    margin-top: 0px ;
     background-color: #000; 
     height: 75px; 
     display: flex; 
@@ -334,7 +341,7 @@ body a{
     position: absolute;
     bottom: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 2 ;
 }
 
 #derechos{
@@ -342,9 +349,10 @@ body a{
     font-size: 22px;
     margin: auto;
     font-family: 'Poppins';
-}
+}   
 
 /*Pqrs*/
+
 .pqrs{
     position: absolute;
     position: fixed;
@@ -363,4 +371,5 @@ body a{
 .check-box{
 margin: 10px 11px 15px 0;
 }
+
 /*pqrs fin*/

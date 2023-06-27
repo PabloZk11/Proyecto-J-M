@@ -36,12 +36,20 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="but_menu">
+                    <a href="proveedor-v.html" class="but_menu">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                            Proveedores
+                        </label>
+                    </a>
+                </li>
+                <li>
+                    <a href="dsc/informe.docx" class="but_menu" download="Vendedor 1">
                         <i class="fa-solid fa-file"></i>
                         <label for="btn-modal-ventas">
                             Generar informe
                         </label>
                     </a>
+                </li>
                 </li>
                 <li id="li_cerrar">
                     <a href="#" class="but_menu">
@@ -82,7 +90,7 @@
                             <input type="search" name="Nombre" class="in" placeholder="Nombre:" required="required">
                             <input type="number" name="Cantidad" class="in" placeholder="Cantidad:" required="required">
                             <input type="number" name="Valor Compra" class="in" placeholder="Valor Compra:" required="required">
-                            <input type="time" name="Fecha" class="in" placeholder="Fecha:" required="required">
+                            <input type="date" name="Fecha" class="in" placeholder="Fecha:" required="required">
                             
             
                         </div>
@@ -96,6 +104,28 @@
         </div>
     <!--Fin de Ventana Modal Advertencia-->
 
+    <!--Ventana Modal Filtro-->
+        <input type="checkbox" id="btn-modal-filtro">
+        <div class="container-modal-filtro">
+            <div class="content-modal-filtro">
+                <h2>Filtrar Ventas</h2>
+                <p>En este apartado podras elegir desde que fecha quieres 
+                    ver las ventas realizadas en la papeleria Aulas. </p>
+                    <div>
+                        <form class="formulario">
+                            <div class="f1">
+                                <input type="date" name="Fecha" class="in" placeholder="Fecha:" required="required"> 
+                            </div>
+                        </form> 
+                    </div>
+                    <div class="btn-cerrar-filtro" >
+                        <label for="btn-modal-filtro" ><a href="ventas_vendedor_vacio.html"><input type="submit" value="Añadir" class="enviar"></a></label>
+                    </div>
+                </div>
+                <label for="btn-modal-filtro" class="cerrar-modal-filtro"></label>
+            </div>
+    <!--Fin de Ventana Modal-->
+
     <section id="cont_table">
         <div class="cont">
             <h2 class="title">Ventas</h2>   
@@ -107,13 +137,15 @@
                     </label></a>
                 </section>
                 <section id="ag_prod">
-                    <a href="#" id="but_ag">Filtro</a>
+                    <a href="#" id="but_ag"><label for="btn-modal-filtro">
+                        Filtro
+                    </label></a>
                 </section>
                 <section id="ag_prod">
-                    <a href="#" id="but_ag">Generar informe</a>
+                    <a href="dsc/informe.docx" id="but_ag" download="Informe Ventas">Generar informe</a>
                 </section>
                 <section id="ag_prod">
-                    <a href="#" id="but_ag">Imprimir última venta</a>
+                    <a href="dsc/imprimir.pdf" id="but_ag" download="Ultima Venta">Imprimir última venta</a>
                 </section>
             </div>
 
@@ -134,7 +166,7 @@
                         <tr class="fila_i">
                             <td>01</td>
                             <td class="text_filas">vendedor1</td>
-                            <td class="text_filas">Libreta Block de Dibujo Profesional </td>
+                            <td class="text_filas">Libreta Block de Dibujo Profesional</td>
                             <td class="text_filas">2</td>
                             <td class="text_filas">$ 21,000</td>
                             <td class="text_filas">25/06/2023</td>
@@ -143,7 +175,7 @@
                         <tr class="fila_p">
                             <td class="text_filas">02</td>
                             <td class="text_filas">vendedor1</td>
-                            <td class="text_filas">Lápices de colores</td>
+                            <td class="text_filas">Lápices de colores+Borrador</td>
                             <td class="text_filas">2+2</td>
                             <td class="text_filas">$ 15,000</td>
                             <td class="text_filas">25/06/2023</td>
@@ -161,13 +193,12 @@
                         <tr class="fila_p">
                             <td class="text_filas">04</td>
                             <td class="text_filas">vendedor1</td>
-                            <td class="text_filas">Pincel redondo</td>
+                            <td class="text_filas">Pincel redondo+Cartulina</td>
                             <td class="text_filas">3+1</td>
                             <td class="text_filas">$ 9,200</td>
                             <td class="text_filas">25/06/2023</td>
 
                         </tr>
-
                         <tr class="fila_i">
                             <td class="text_filas">&#160<td>
                             <td class="text_filas"></td>
