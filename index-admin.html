@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20420209b7.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index-admin.css">
 
     <title>Inicio-Sesion</title>
@@ -64,7 +65,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="dsc/informe.docx" class="but_menu" download="administrador Informe">
+                    <a href="dsc/informe.docx" class="but_menu" download="administrador Informe" id="liveToastBtn">
                         <i class="fa-solid fa-file"></i>
                         <label for="btn-modal-ventas">
                             Generar Informe
@@ -93,21 +94,32 @@
             </div>
             <label for="btn-modal" class="cerrar-modal"></label>
         </div>
+
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                <img src="imagenes/ad.png" class="rounded me-2" alt="..." width="25" height="25">
+                <strong class="me-auto">Mensaje</strong>
+                <small>Hace 1 minuto</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                Se ha generado un informe
+                </div>
+            </div>
+        </div>
         <!--Fin de Ventana Modal-->
 
         <div class="main">
-            <h2>¡Bienvenido, administrador!</h2>
-            <p class="p1">
-                En la barra lateral izquierda podrás encontrar botones que te indicarán los apartados que necesites 
-            </p>
-            <p class="p1">
-                para los vendedores de la palería Aulas:
-            </p>
-            <div class="boton">
-                <button id=btnav type="button">
-                </button>
-            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="imagenes/admin.jpg" class="card-img-top" href="#">
+                <div class="card-body">
+                  <h5 class="card-title text-center">¡Bienvenido, administrador!</h5>
+                  <p class="card-text" >En la barra lateral izquierda podrás encontrar botones que te indicarán los apartados que necesites para los vendedores de la palería Aulas</p>
+                </div>
+              </div>
         </div>  
+
         <div class="pqrs">
             <section id="pqrs_se">
                 <a href="Pqrs.html" id="icon_pqrs"><i class="fa-solid fa-circle-exclamation icon" id="icon_pqrs" href="Pqrs.html"></i></a>
@@ -124,5 +136,8 @@
     <footer id="foot">
         <small id="derechos">&copy; 2023  <b>Aulas</b> - todos los derechos reservados</small>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="JS/toats.js"></script>
 </body>
 </html> 

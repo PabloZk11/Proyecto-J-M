@@ -623,3 +623,7 @@ margin: 10px 11px 15px 0;
     }
 }
 /*:::Fin Ventana Modal -filtro:::*/
+
+.btn btn-secondary dropdown-toggle{
+    background-color: #000;
+}

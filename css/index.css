@@ -210,3 +210,21 @@ footer.pie-pagina {
 }    
 }
 /*pqrs fin*/
+
+/*Bootstrap*/
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(108%);
+  }
+
+  /* CSS personalizado para centrar las imágenes y ajustar su ancho */
+  .carousel-inner img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Establecer el ancho de las imágenes al 10% del carrusel */
+  .custom-carousel .carousel-inner .carousel-item img {
+    margin-top: 50px;
+    width: 45%;
+  }
