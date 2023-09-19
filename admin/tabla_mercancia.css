@@ -267,7 +267,7 @@ body a{
     width: 99%;
     height: 25px;
     padding: 5px;
-    background-color: #e7e4e4;
+    background-color: #d3cece;
     color: #000;
     border: 2px solid #000;
 }
@@ -277,10 +277,8 @@ body a{
 }
 
 #table_inv thead{
-    background-color: #8090d4;
+    background-color: #a74343;
     border: #000 2px solid;
-    font-size: 22px;
-
 }
 
 #table_inv thead tr{
@@ -305,10 +303,20 @@ body a{
     padding: 15px;
 }
 
+.a_edit{
+    color: #000;
+}
 
+.a_edit:link{
+    color: #000;
+}
+
+.a_edit:visited{
+    color: #000;
+}
 
 .fila_i{
-    background-color: #ecebee;
+    background-color: #B6B4B9;
     font-size: 22px;
 }
 
@@ -330,24 +338,33 @@ body a{
     padding: 12px;
 }
 
+.but_cont{
+    display: flex;
+    align-items: center;
+
+}
+
 #ag_prod{
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-right: 10px;
+    margin-left: 1px;
+    
 }
 
 #but_ag{
-    font-size: 25px;
-    padding: 15px;
-    padding-left: 35px;
-    padding-right: 35px;
-    background-color: #667bda;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #000;
     text-decoration: none;
     border-radius: 7px;
     transition: all 0.25s ease;
 }
 
 #but_ag:link{
-    color: #ffffff;
+    color: #fff;
 }
 
 #but_ag:visited{
@@ -355,9 +372,43 @@ body a{
 }
 
 #but_ag:hover{
-    color: #000000;
+    color: #aaaaaa;
 }
 
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 23px;
+    background-color: #47b34e ;
+    border-radius: 40px;
+}
+
+.switch::after{
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+    background-color: #DDDBE1;
+    left: 3px;
+    top: 3px;
+    transition: all 0.3s ease;
+}
+
+input[type='checkbox']:checked + .switch::after{
+    transform: translate(17px);
+    background-color: #000;
+}
+
+input[type='checkbox']:checked + .switch{
+    background-color: #3d4041 ;
+}
+
+.offscreen{
+    position: absolute;
+    left: -99999px;
+}
 
 
 /*Footer*/  
@@ -400,3 +451,181 @@ body a{
 margin: 10px 11px 15px 0;
 }
 /*pqrs fin*/
+
+/*:::Ventana Modal añadir:::*/
+#btn-modal-añadir{
+    display: none;
+}
+.container-modal-añadir{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.603);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#btn-modal-añadir:checked ~ .container-modal-añadir{
+    display: flex;
+}
+.content-modal-añadir{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.content-modal-añadir h2{
+    margin-bottom: 15px;
+}
+.content-modal-añadir p{
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+.content-modal-añadir .btn-cerrar-añadir{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-modal-añadir .btn-cerrar-añadir label{
+    padding: 7px 10px;
+    background-color: #a72c2c;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.content-modal-añadir .btn-cerrar-añadir .enviar label:hover{
+    background-color:#92000A;
+}
+.cerrar-modal-añadir{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+}
+@media screen and (max-width:800px) {
+    .content-modal-añadir{
+        width: 90%;
+    }
+}
+
+.formulario{    
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;   
+    margin-top: 0;
+}
+
+.f1{
+	width: 100%;
+	display: grid;
+	gap: 1em;
+	grid-auto-columns: 100%;
+}
+
+.ti{
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: .4em;
+	color: #92000A;
+}
+
+.in{
+	font-family: inherit;
+	font-size: 1rem;
+	padding: .8em 1em;
+	outline: none;
+	border: none;
+	border: 1px  solid #92000A;
+	border-radius: 7px;
+
+}
+
+.in--h{
+	resize: none;
+	padding: .8em 1em;
+	padding-top: 5px;
+	margin-bottom: .5em;
+}
+
+.enviar{
+	font-family: inherit;
+	font-size: 1rem;
+	background-color: #a72c2c;
+	color: #ffffff;
+	border: none;
+	font-weight: 300;
+	padding: .7em 0;
+	border-radius: 7px;
+	cursor: pointer;
+}
+/*:::Fin Ventana Modal añadir:::*/
+
+/*:::Ventana Modal -filtro:::*/
+#btn-modal-filtro{
+    display: none;
+}
+.container-modal-filtro{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.603);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#btn-modal-filtro:checked ~ .container-modal-filtro{
+    display: flex;
+}
+.content-modal-filtro{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.content-modal-filtro h2{
+    margin-bottom: 15px;
+}
+.content-modal-filtro p{
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+.content-modal-filtro .btn-cerrar-filtro{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-modal-filtro .btn-cerrar-filtro label{
+    padding: 7px 10px;
+    background-color: #a72c2c;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.content-modal-filtro .btn-cerrar-filtro .enviar label:hover{
+    background-color:#92000A;
+}
+.cerrar-modal-filtro{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+}
+@media screen and (max-width:800px) {
+    .content-modal-filtro{
+        width: 90%;
+    }
+}
