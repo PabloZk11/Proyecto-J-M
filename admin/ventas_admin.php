@@ -1,3 +1,10 @@
+<?php
+
+include("../php/conexion.php");
+$con=conectar();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +18,7 @@
 </head>
 <body>
     <header id="header">
-        <img src="/img/logo.png" alt="" id="logo">
+        <img src="../img/logo.png" alt="" id="logo">
         <nav id="nav_re">
         </nav>
     </header>
@@ -169,77 +176,49 @@
 
             <section>
 
-                
-                <table id="table_inv">
-                    <thead>
-                        <tr>
-                            <th class="tits_table">ID</th>
-                            <th class="tits_table">Vendedor</th>
-                            <th class="tits_table">Nombre</th>
-                            <th class="tits_table">Cantidad</th>
-                            <th class="tits_table">Valor compra</th>
-                            <th class="tits_table">Fecha</th>
-                        </tr>
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">Id_factura</th>
+                        <th scope="col">Id_tdoc_vendedor_factura</th>
+                        <th scope="col">Id_vendedor_factura</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Factura</th>
+                      </tr>
                     </thead>
-                    <tbody>
-                        <tr class="fila_i">
-                            <td>01</td>
-                            <td class="text_filas">vendedor1</td>
-                            <td class="text_filas">Libreta Block de Dibujo Profesional</td>
-                            <td class="text_filas">2</td>
-                            <td class="text_filas">$ 21,000</td>
-                            <td class="text_filas">25/06/2023</td>
 
-                        </tr>
-                        <tr class="fila_p">
-                            <td class="text_filas">02</td>
-                            <td class="text_filas">vendedor1</td>
-                            <td class="text_filas">Lápices de colores+Borrador</td>
-                            <td class="text_filas">2+2</td>
-                            <td class="text_filas">$ 15,000</td>
-                            <td class="text_filas">25/06/2023</td>
+                    <?php 
+                    #capturamos la conexio
+                    $sql="SELECT * FROM factura";
+                    $query=mysqli_query($con,$sql);
+                    if($query){
+                        $contador=1;
+                        while ($row=mysqli_fetch_assoc($query)) {
+                            #capturamos los datos
+                            $id_factura = $row["id_factura"];
+                            $id_tdoc_vendedor_factura = $row["id_tdoc_vendedor_factura"];
+                            $id_vendedor_factura = $row["id_vendedor_factura"];
+                            $descripcion = $row["descripcion"];
+                            $fecha = $row["fecha"];               
 
-                        </tr>
-                        <tr class="fila_i">
-                            <td class="text_filas">03</td>
-                            <td class="text_filas">vendedor1</td>
-                            <td class="text_filas">Cuaderno de notas</td>
-                            <td class="text_filas">1</td>
-                            <td class="text_filas">$ 8,000 </td>
-                            <td class="text_filas">25/06/2023</td>
+                     ?>
 
-                        </tr>
-                        <tr class="fila_p">
-                            <td class="text_filas">04</td>
-                            <td class="text_filas">vendedor1</td>
-                            <td class="text_filas">Pincel redondo+Cartulina</td>
-                            <td class="text_filas">3+1</td>
-                            <td class="text_filas">$ 9,200</td>
-                            <td class="text_filas">25/06/2023</td>
-
-                        </tr>
-                        <tr class="fila_i">
-                            <td class="text_filas">05</td>
-                            <td class="text_filas">vendedor1</td>
-                            <td class="text_filas">Marcador+Borrador</td>
-                            <td class="text_filas">1+1</td>
-                            <td class="text_filas">$ 7,000</td>
-                            <td class="text_filas">27/06/2023</td>
-
-                        </tr>
-                        <tr class="fila_i">
-                            <td class="text_filas">&#160<td>
-                            <td class="text_filas"></td>
-                            <td class="text_filas">&nbsp</td>
-                            <td class="text_filas">&nbsp</td>
-                            <td class="text_filas"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <tr>
+                        <th scope="row"><?php echo $id_factura; ?></th>
+                        <td><?php echo $id_tdoc_vendedor_factura; ?></td>
+                        <td><?php echo $id_vendedor_factura; ?></td>
+                        <td><?php echo $descripcion; ?></td>
+                        <td><?php echo $fecha; ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                  </table>
             </section>
 
             <div id="div_buscador">
-                <img src="/img/Lupa.png" alt="">
+                <img src="../img/Lupa.png" alt="">
                 <input type="text" id="buscador" placeholder="Busca alguna venta">
             </div>
         </div>

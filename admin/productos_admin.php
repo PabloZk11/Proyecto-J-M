@@ -1,3 +1,10 @@
+<?php
+
+include("../php/conexion.php");
+$con=conectar();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +14,13 @@
     <link rel="stylesheet" href="productos_admin.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20420209b7.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <title>Productos</title>
 </head>
 <body>
     <header id="header">
-        <img src="imagenes/logo.png" alt="" id="logo">
+        <img src="../img/logo.png" alt="" id="logo">
         <nav id="nav_re">
         </nav>
     </header>
@@ -132,90 +141,51 @@
             </div>
 
             <section>
-
-            <section>
-                <table id="table_inv">
-                    <thead>
-                        <tr>
-                            <th class="tits_table">ID</th>
-                            <th class="tits_table">Nombre</th>
-                            <th class="tits_table">Precio Compra</th>
-                            <th class="tits_table">Precio Venta</th>
-                            <th class="tits_table">Stock Actual</th>
-                            <th class="tits_table">Editar</th>
-                            <th class="tits_table">Estado</th>
-                        </tr>
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">Id_producto</th>
+                        <th scope="col">Id_categoria_producto</th>
+                        <th scope="col">Nom_producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Unidades</th>
+                        <th scope="col">Descripcion/Detalles</th>
+                      </tr>
                     </thead>
-                    <tbody>
-                        <tr class="fila_i">
-                            <td>01</td>
-                            <td class="text_filas">Libreta Block de
-                                Dibujo Profesional </td>
-                            <td class="text_filas">$ 18,000</td>
-                            <td class="text_filas">$ 21,000</td>
-                            <td class="text_filas">20</td>
-                            <td class="td_edit"><button class="btn-edit"><a href="editar_producto.html" class="a_edit">Editar</a></button></td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle" class="offscreen">
-                                <label for="toogle" class="switch"></label>
-                            </td>
-                        </tr>
-                        <tr class="fila_p">
-                            <td class="text_filas">02</td>
-                            <td class="text_filas">Lápices de colores</td>
-                            <td class="text_filas">$ 12,500</td>
-                            <td class="text_filas">$ 15,000</td>
-                            <td class="text_filas">50</td>
-                            <td class="td_edit"><button class="btn-edit"><a href="editar_producto.html" class="a_edit">Editar</a></button></td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle2" class="offscreen">
-                                <label for="toogle2" class="switch"></label>
-                            </td>
-                        </tr>
-                        <tr class="fila_i">
-                            <td class="text_filas">03</td>
-                            <td class="text_filas">Cuaderno de notas</td>
-                            <td class="text_filas">$ 6,990</td>
-                            <td class="text_filas">$ 8,000 </td>
-                            <td class="text_filas">30</td>
-                            <td class="td_edit"><button class="btn-edit"><a href="editar_producto.html" class="a_edit">Editar</a></button></td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle3" class="offscreen">
-                                <label for="toogle3" class="switch"></label>
-                            </td>
-                        </tr>
-                        <tr class="fila_p">
-                            <td class="text_filas">04</td>
-                            <td class="text_filas">Pincel redondo</td>
-                            <td class="text_filas">$ 8,750</td>
-                            <td class="text_filas">$ 9,200</td>
-                            <td class="text_filas">15</td>
-                            <td class="td_edit"><button class="btn-edit"><a href="editar_producto.html" class="a_edit">Editar</a></button></td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle4" class="offscreen">
-                                <label for="toogle4" class="switch"></label>
-                            </td>
-                        </tr>
-                        <tr class="fila_i">
-                            <td class="text_filas">05</td>
-                            <td class="text_filas">Set de marcadores</td>
-                            <td class="text_filas">$ 24,990</td>
-                            <td class="text_filas">$ 27,000</td>
-                            <td class="text_filas">10</td>
-                            <td class="td_edit"><button class="btn-edit"><a href="editar_producto.html" class="a_edit">Editar</a></button></td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle5" class="offscreen">
-                                <label for="toogle5" class="switch"></label>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            
 
+                    <?php 
+                    #capturamos la conexio
+                    $sql="SELECT * FROM producto LIMIT 8";
+                    $query=mysqli_query($con,$sql);
+                    if($query){
+                        $contador=1;
+                        while ($row=mysqli_fetch_assoc($query)) {
+                            #capturamos los datos
+                            $id_producto = $row["id_producto"];
+                            $id_categoria_producto = $row["id_categoria_producto"];
+                            $nom_producto = $row["nom_producto"];
+                            $precio = $row["precio"];
+                            $unidades = $row["unidades"];               
+                            $detalles_descripcion = $row["detalles_descripcion"];    
+                     ?>
+
+                    <tr>
+                        <th scope="row"><?php echo $id_producto; ?></th>
+                        <td><?php echo $id_categoria_producto; ?></td>
+                        <td><?php echo $nom_producto; ?></td>
+                        <td><?php echo $precio; ?></td>
+                        <td><?php echo $unidades; ?></td>
+                        <td><?php echo $detalles_descripcion; ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                  </table>
+            </section>
 
             <div id="div_buscador">
-                <img src="imagenes/Lupa.png" alt="">
+                <img src="../img/Lupa.png" alt="">
                 <input type="text" id="buscador" placeholder="Busca algún Producto:">
             </div>
         </div>

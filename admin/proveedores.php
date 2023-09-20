@@ -1,3 +1,10 @@
+<?php
+
+include("../php/conexion.php");
+$con=conectar();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +13,13 @@
     <script src="https://kit.fontawesome.com/20420209b7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="proveedores.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <title>Proveedores</title>
 </head>
 <body>
     <header id="header">
-        <img src="imagenes/logo.png" alt="" id="logo">
+        <img src="../img/logo.png" alt="" id="logo">
         <nav id="nav_re">
         </nav>
     </header>
@@ -104,7 +113,7 @@
     
                         <input type="search" name="Nombre mercancía  " class="in" placeholder="Nombre mercancía:" required="required">
                         <input type="search" name="Cantidad Unidades" class="in" placeholder="Cantidad Unidades:" required="required">
-                        <input type="search" name="Precio Compra" class="in" placeholder="Precio Compra:" required="required">
+                        <input type="search" name="detalles_productos Compra" class="in" placeholder="detalles_productos Compra:" required="required">
                         <input type="search" name="Descripccion" class="in" placeholder="Descripccion:" required="required">
                         <input type="search" name="Id_Pedido" class="in" placeholder="Id_Pedido:" required="required">
                         <input type="search" name="Id_Proveedor" class="in" placeholder="Id_Proveedor:" required="required">
@@ -166,98 +175,44 @@
 
     <!--Fin de Ventana Modal-->
 
-    <section id="cont_table">
-        <div class="cont">
-            <section>
-                <table id="table_inv">
-                    <thead>
-                        <tr>
-                            <th class="tits_table">ID</th>
-                            <th class="tits_table">Nombre</th>
-                            <th class="tits_table">Producto</th>
-                            <th class="tits_table">Precio Compra</th>
-                            <th class="tits_table">Unidades ingresadas</th>
-                            <th class="tits_table">Fecha</th>
-                            <th class="tits_table">Hora_entrada</th>
-                            <th class="tits_table">Editar</th>
-                            <th class="tits_table">Estado</th>
-                        </tr>
+    <section>
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">id_proveedor</th>
+                        <th scope="col">id_tdoc_proveedor</th>
+                        <th scope="col">producto</th>
+                        <th scope="col">detalles_productos</th>
+                      </tr>
                     </thead>
-                    <tbody>
-                        <tr class="fila_i">
-                            <td>01</td>
-                            <td class="text_filas">Norma </td>
-                            <td class="text_filas">Libreta Block de Dibujo Profesional</td>
-                            <td class="text_filas">$ 18,000</td>
-                            <td class="text_filas">12</td>
-                            <td class="text_filas">20/03/2021</td>
-                            <td class="text_filas">15:20</td>
-                            <td class="td_edit"><button class="btn-edit">Editar</button></td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle" class="offscreen">
-                                <label for="toogle" class="switch"></label>
-                            </td>
-                        </tr>
-                        <tr class="fila_p">
-                            <td class="text_filas">02</td>
-                            <td class="text_filas">Faber-Castell </td>
-                            <td class="text_filas">Lápices de colores</td>
-                            <td class="text_filas">$ 12,500</td>
-                            <td class="text_filas">6</td>
-                            <td class="text_filas">02/01/2022</td>
-                            <td class="text_filas">09:30</td>
-                            <td class="td_edit"><button class="btn-edit">Editar</button></td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle2" class="offscreen">
-                                <label for="toogle2" class="switch"></label>
-                            </td>
-                        </tr>
-                        <tr class="fila_i">
-                            <td class="text_filas">03</td>
-                            <td class="text_filas">Jean bool</td>
-                            <td class="text_filas">Cuaderno de notas</td>
-                            <td class="text_filas">$ 6,990</td>
-                            <td class="text_filas">15 </td>
-                            <td class="text_filas">25/03/2023</td>
-                            <td class="text_filas">12:11</td>
-                            <td class="td_edit"><button class="btn-edit">Editar</button></td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle3" class="offscreen">
-                                <label for="toogle3" class="switch"></label>
-                            </td>
-                        </tr>
-                        <tr class="fila_p">
-                            <td class="text_filas">04</td>
-                            <td class="text_filas">Blick</td>
-                            <td class="text_filas">Pincel redondo</td>
-                            <td class="text_filas">$ 8,750</td>
-                            <td class="text_filas">8</td>
-                            <td class="text_filas">29/09/2022</td>
-                            <td class="text_filas">13:25</td>
-                            <td class="td_edit"><button class="btn-edit">Editar</button></td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle4" class="offscreen">
-                                <label for="toogle4" class="switch"></label>
-                            </td>
-                        </tr>
-                        <tr class="fila_i">
-                            <td class="text_filas">05</td>
-                            <td class="text_filas">Sharpie</td>
-                            <td class="text_filas">Set de marcadores</td>
-                            <td class="text_filas">$ 24,990</td>
-                            <td class="text_filas">10</td>
-                            <td class="text_filas">15/11/2022</td>
-                            <td class="text_filas">16:41</td>
-                            <td class="td_edit"><button class="btn-edit">Editar</button></td>
-                            <td class="cont_toogle">
-                                <input type="checkbox" id="toogle5" class="offscreen">
-                                <label for="toogle5" class="switch"></label>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                    <?php 
+                    #capturamos la conexio
+                    $sql="SELECT * FROM proveedor";
+                    $query=mysqli_query($con,$sql);
+                    if($query){
+                        $contador=1;
+                        while ($row=mysqli_fetch_assoc($query)) {
+                            #capturamos los datos
+                            $id_proveedor = $row["id_proveedor"];
+                            $id_tdoc_proveedor = $row["id_tdoc_proveedor"];
+                            $producto = $row["producto"];
+                            $detalles_productos = $row["detalles_productos"];    
+                     ?>
+
+                    <tr>
+                        <th scope="row"><?php echo $id_proveedor; ?></th>
+                        <td><?php echo $id_tdoc_proveedor; ?></td>
+                        <td><?php echo $producto; ?></td>
+                        <td><?php echo $detalles_productos; ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                  </table>
             </section>
-        
+
         </div>
     </section>
     </main>

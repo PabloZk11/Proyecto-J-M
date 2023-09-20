@@ -626,3 +626,9 @@ margin: 10px 11px 15px 0;
 .btn btn-secondary dropdown-toggle{
     background-color: #000;
 }
+
+.thead-color {
+    background-color: #92000A; 
+    color: white; 
+}
+
