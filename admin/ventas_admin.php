@@ -62,8 +62,8 @@ $con=conectar();
                 <li id="li_cerrar">
                     <a href="Vendedor.html" class="but_menu">
                         <i class="fa-solid fa-users"></i>
-                        <label for="btn-modal">
-                            Usuarios
+                        <label for="btn-modal-ventas">
+                            Vendedor
                         </label>
                     </a>
                 </li>

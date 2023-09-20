@@ -64,7 +64,7 @@ $con=conectar();
                 <li id="li_cerrar">
                     <a href="Vendedor.html" class="but_menu">
                         <i class="fa-solid fa-users"></i>
-                        <label for="btn-modal">
+                        <label for="btn-modal-ventas">
                             Vendedor
                         </label>
                     </a>
@@ -93,19 +93,21 @@ $con=conectar();
             <div class="content-modal-añadir">
                 <h2>Productos</h2>
                 <div>
-                    <form class="formulario">
+                    <form class="formulario" action="../php/registrar_productos.php" method="post">
                         <div class="f1">
         
-                           <input type="search" name="Nombre del producto  " class="in" placeholder="Nombre del producto:" required="required">
-                            <input type="search" name="Precio Compra" class="in" placeholder="Precio Compra:" required="required">
-                            <input type="number" name="Unidades" class="in" placeholder="Unidades:" required="required">
-                            <input type="number" name="Descripccion" class="in" placeholder="Descripccion:" required="required">
+                           <input type="text" name="id_producto" class="in" placeholder="id_producto" required="required">
+                            <input type="text" name="categoria" class="in" placeholder="id_categoria_producto" required="required">
+                            <input type="text" name="nom_producto" class="in" placeholder="Nombre:" required="required">
+                            <input type="number" name="precio" class="in" placeholder="precio:" required="required">
+                            <input type="text" name="unidades" class="in" placeholder="Unidades:" required="required">
+                            <input type="text" name="detalles" class="in" placeholder="detalles:" required="required">
+
+                            <button type="sumbit">registrar</button>
                         </div>
-                    </form> 
+                    </form>
                 </div>
-                <div class="btn-cerrar-añadir" >
-                    <label for="btn-modal-añadir" ><a href="ventas_vendedor_añadir.html"><input type="submit" value="Añadir" class="enviar"></a></label>
-                </div>
+               
             </div>
             <label for="btn-modal-añadir" class="cerrar-modal-añadir"></label>
         </div>

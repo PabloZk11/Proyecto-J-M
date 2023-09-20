@@ -47,7 +47,16 @@ $con=conectar();
                 <li>
                     <a href="proveedor-v.html" class="but_menu">
                         <i class="fa-solid fa-boxes-stacked"></i>
-                            Proveedores
+                        <label for="btn-modal-ventas"> 
+                            Mercancia
+                        </label>
+                    </a>
+                </li>
+                <li id="li_cerrar">
+                    <a href="Vendedor.html" class="but_menu">
+                        <i class="fa-solid fa-users"></i>
+                        <label for="btn-modal-ventas">
+                            Vendedor
                         </label>
                     </a>
                 </li>
