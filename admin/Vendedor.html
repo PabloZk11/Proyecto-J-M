@@ -94,19 +94,19 @@
     <input type="checkbox" id="btn-modal-añadir">
     <div class="container-modal-añadir">
         <div class="content-modal-añadir">
-            <h2>Registrar Entrada de Compra</h2>
+            <h2>Registrar Vendedor</h2>
             <div>
-                <form class="formulario" action="../php/registro_mercancia.php" method="POST">
+                <form class="formulario" action="../php/registro_vendedor.php" method="POST">
                     <div class="f1">
-                        <input type="search" name="nombre_pro" class="in" placeholder="Nombre producto:" required="required">
-                        <input type="search" name="cantidad_u" class="in" placeholder="Cantidad Unidades:" required="required">
-                        <input type="search" name="precio_compra" class="in" placeholder="Precio Compra:" required="required">
-                        <input type="search" name="descripccion" class="in" placeholder="Descripccion:" required="required">
-                        <input type="search" name="id_pedido" class="in" placeholder="Id_Pedido:" required="required">
-                        <input type="search" name="id_proveedor" class="in" placeholder="Id_Proveedor:" required="required">
-                        <button id="but_repo" type="submit">REGISTRAR COMPRA</button>
+    
+                        <input type="search" name="id_usu" class="in" placeholder="Id_usuario :" required="required">
+                        <input type="search" name="id_tdo" class="in" placeholder="id_tdoc_usuario :" required="required">
+                        <input type="search" name="nombre" class="in" placeholder="nombre_prov:" required="required">
+                        <input type="search" name="emai" class="in" placeholder="Email:" required="required">
+                        <input type="search" name="contra" class="in" placeholder="Contraseña:" required="required">
+                        <button type="submit">Registrar</button>
                     </div>
-                </form> 
+                </form>
             </div>
         </div>
         <label for="btn-modal-añadir" class="cerrar-modal-añadir"></label>
@@ -141,7 +141,7 @@
         <div class="but_cont">
             <section id="ag_prod">
                 <a href="#" id="but_ag"><label for="btn-modal-añadir">
-                    Registrar Entrada de compra
+                    Registrar Vendedor
                 </label></a>
             </section>
             <section id="ag_prod">
