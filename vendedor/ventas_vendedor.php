@@ -91,17 +91,15 @@ $con=conectar();
             <div class="content-modal-añadir">
                 <h2>Añadir Venta</h2>
                 <div>
-                    <form class="formulario">
+                    <form class="formulario" method="post" action="../php/ventas_admin.php">
                         <div class="f1">
         
-                            <input type="number" name="Id del producto  " class="in" placeholder="Id del producto:" required="required">
-                            <input type="search" name="Vendedor" class="in" placeholder="Vendedor:" required="required">
-                            <input type="search" name="Nombre" class="in" placeholder="Nombre:" required="required">
-                            <input type="number" name="Cantidad" class="in" placeholder="Cantidad:" required="required">
-                            <input type="number" name="Valor Compra" class="in" placeholder="Valor Compra:" required="required">
+                            <input type="number" name="Id_factura" class="in" placeholder="N_factura" required="required">
+                            <input type="search" name="documento_vendedor" class="in" placeholder="id_tdoc_vendedor" required="required">
+                            <input type="search" name="id_vendedor" class="in" placeholder="id_vendedor" required="required">
+                            <input type="text" name="descripcion" class="in" placeholder="descripcion" required="required">
                             <input type="date" name="Fecha" class="in" placeholder="Fecha:" required="required">
-                            
-            
+                            <button  type="submit">Añadir venta</button>
                         </div>
                     </form> 
                 </div>
@@ -165,8 +163,9 @@ $con=conectar();
                     <thead class="table-dark">
                       <tr>
                         <th scope="col">Id_factura</th>
-                        <th scope="col">Id_tdoc_vendedor_factura</th>
-                        <th scope="col">Id_vendedor_factura</th>
+                        <th scope="col">Tipo_documento</th>
+                        <th scope="col">Id_vendedor</th>
+                        <th scope="col">Nombre_vendedor</th>
                         <th scope="col">Descripcion</th>
                         <th scope="col">Factura</th>
                       </tr>
@@ -174,15 +173,16 @@ $con=conectar();
 
                     <?php 
                     #capturamos la conexio
-                    $sql="SELECT * FROM factura";
+                    $sql="SELECT f.id_factura, di.tipo_documento, u.id_usuario, u.nombre, f.descripcion, f.fecha FROM factura f INNER JOIN vendedor v ON f.id_vendedor_factura = v.id_usuario_papeleria INNER JOIN usuario u ON v.id_usuario_papeleria = u.id_usuario INNER JOIN documento_identificacion di ON u.id_tdoc_usuario = di.id_documento";
                     $query=mysqli_query($con,$sql);
                     if($query){
                         $contador=1;
                         while ($row=mysqli_fetch_assoc($query)) {
                             #capturamos los datos
                             $id_factura = $row["id_factura"];
-                            $id_tdoc_vendedor_factura = $row["id_tdoc_vendedor_factura"];
-                            $id_vendedor_factura = $row["id_vendedor_factura"];
+                            $tipo_documento = $row["tipo_documento"];
+                            $id_vendedor = $row["id_usuario"];
+                            $nombre_vendedor = $row["nombre"];
                             $descripcion = $row["descripcion"];
                             $fecha = $row["fecha"];               
 
@@ -190,8 +190,9 @@ $con=conectar();
 
                     <tr>
                         <th scope="row"><?php echo $id_factura; ?></th>
-                        <td><?php echo $id_tdoc_vendedor_factura; ?></td>
-                        <td><?php echo $id_vendedor_factura; ?></td>
+                        <td><?php echo $tipo_documento; ?></td>
+                        <td><?php echo $id_vendedor; ?></td>
+                        <td><?php echo $nombre_vendedor; ?></td>
                         <td><?php echo $descripcion; ?></td>
                         <td><?php echo $fecha; ?></td>
                     </tr>
@@ -201,31 +202,6 @@ $con=conectar();
                     ?>
                   </table>
             </section>
-
-            <div id="div_buscador">
-                <img src="../img/Lupa.png" alt="">
-                <input type="text" id="buscador" placeholder="Busca alguna venta">
-            </div>
-            
-            <div style="margin-left: 300px">
-                <nav aria-label="...">
-                    <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link">Anterior</a>
-                    </li>
-                    <li class="page-item active" aria-current="page">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Siguiente</a>
-                    </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </section>
     </main>
     <div class="pqrs">
         <i class="fa-solid fa-circle-exclamation fa-beat"></i>
