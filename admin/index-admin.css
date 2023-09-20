@@ -125,7 +125,7 @@ body a{
 .menu_nav{
     display: flex;
     flex-direction: column;
-    height: 10REM;
+    list-style: none;
 }
 
 .sidebar h2{
@@ -140,7 +140,7 @@ body a{
 }
 
 .sidebar ul li {
-    margin: 15px 0;
+    margin: 12px 0;
 }
 
 .sidebar ul li label{
@@ -149,28 +149,12 @@ body a{
 
 .sidebar ul li a{
     color: #fff;
-    padding: 0 30px;
     transition: all 0.25s ease;
-    text-decoration: none;
 }
 
 .sidebar ul li a:hover{
     color: #000;
     margin-left: 20px;
-}
-
-/* Menu Fin */
-
-/*Cerrar Sesión*/
-
-.exit {
-    color: #ffffff;
-
-}
-.exit a:hover{
-    color: #000000;
-    margin-left: 20px;
-    transition: 0.4s;
 }
 
 /*Cerrar Sesión*/
