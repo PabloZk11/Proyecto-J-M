@@ -55,7 +55,7 @@
                 <li id="li_cerrar">
                     <a href="Vendedor.html" class="but_menu">
                         <i class="fa-solid fa-users"></i>
-                        <label for="btn-modal">
+                        <label for="btn-modal-ventas">
                             Vendedor
                         </label>
                     </a>
@@ -99,17 +99,15 @@
             <div class="content-modal-añadir">
                 <h2>Añadir Venta</h2>
                 <div>
-                    <form class="formulario">
+                    <form class="formulario" method="post" action="../php/ventas_admin.php">
                         <div class="f1">
         
-                            <input type="number" name="Id del producto  " class="in" placeholder="Id del producto:" required="required">
-                            <input type="search" name="Vendedor" class="in" placeholder="Vendedor:" required="required">
-                            <input type="search" name="Nombre" class="in" placeholder="Nombre:" required="required">
-                            <input type="number" name="Cantidad" class="in" placeholder="Cantidad:" required="required">
-                            <input type="number" name="Valor Compra" class="in" placeholder="Valor Compra:" required="required">
+                            <input type="number" name="Id_factura" class="in" placeholder="N_factura" required="required">
+                            <input type="search" name="documento_vendedor" class="in" placeholder="id_tdoc_vendedor" required="required">
+                            <input type="search" name="id_vendedor" class="in" placeholder="id_vendedor" required="required">
+                            <input type="text" name="descripcion" class="in" placeholder="descripcion" required="required">
                             <input type="date" name="Fecha" class="in" placeholder="Fecha:" required="required">
-                            
-            
+                            <button  type="submit">Añadir venta</button>
                         </div>
                     </form> 
                 </div>
