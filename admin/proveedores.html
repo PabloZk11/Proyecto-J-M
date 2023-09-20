@@ -97,22 +97,19 @@
     <input type="checkbox" id="btn-modal-añadir">
     <div class="container-modal-añadir">
         <div class="content-modal-añadir">
-            <h2>Registrar Entrada de Mercancía</h2>
+            <h2>Registrar Vendedor</h2>
             <div>
-                <form class="formulario">
+                <form class="formulario" action="../php/registro_proveedor.php" method="POST">
                     <div class="f1">
     
-                        <input type="search" name="Nombre mercancía  " class="in" placeholder="Nombre mercancía:" required="required">
-                        <input type="search" name="Cantidad Unidades" class="in" placeholder="Cantidad Unidades:" required="required">
-                        <input type="search" name="Precio Compra" class="in" placeholder="Precio Compra:" required="required">
-                        <input type="search" name="Descripccion" class="in" placeholder="Descripccion:" required="required">
-                        <input type="search" name="Id_Pedido" class="in" placeholder="Id_Pedido:" required="required">
-                        <input type="search" name="Id_Proveedor" class="in" placeholder="Id_Proveedor:" required="required">
+                        <input type="search" name="id_usu" class="in" placeholder="Id_usuario :" required="required">
+                        <input type="search" name="id_tdo" class="in" placeholder="id_tdoc_usuario :" required="required">
+                        <input type="search" name="nombre" class="in" placeholder="nombre_prov:" required="required">
+                        <input type="search" name="emai" class="in" placeholder="Email:" required="required">
+                        <input type="search" name="contra" class="in" placeholder="Contraseña:" required="required">
+                        <button type="submit">Registrar</button>
                     </div>
                 </form> 
-            </div>
-            <div class="btn-cerrar-añadir" >
-                <label for="btn-modal-añadir" ><a href="ventas_vendedor_añadir.html"><input type="submit" value="Registrar" class="enviar"></a></label>
             </div>
         </div>
         <label for="btn-modal-añadir" class="cerrar-modal-añadir"></label>
@@ -148,7 +145,7 @@
             <div class="but_cont">
                 <section id="ag_prod">
                     <a href="#" id="but_ag"><label for="btn-modal-añadir">
-                        Añadir producto
+                        Añadir proveedor
                     </label></a>
                 </section>
                 <section id="ag_prod">
@@ -158,9 +155,6 @@
                 </section>
                 <section id="ag_prod">
                     <a href="dsc/informe.docx" id="but_ag" download="Informe Ventas Admin">Generar informe</a>
-                </section>
-                <section id="ag_prod">
-                    <a href="dsc/imprimir.pdf" id="but_ag" download="Ultima Venta">Imprimir última venta</a>
                 </section>
             </div>
 
