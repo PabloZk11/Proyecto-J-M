@@ -89,42 +89,49 @@ $con=conectar();
         <div class="cont">
             <h2 class="title">Proveedor</h2>   
 
-    <section>
-        <table class="table table-striped">
-            <thead class="table-dark">
-              <tr>
-                <th scope="col">id_proveedor</th>
-                <th scope="col">id_tdoc_proveedor</th>
-                <th scope="col">producto</th>
-                <th scope="col">detalles_productos</th>
-              </tr>
-            </thead>
+            <section>
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">Id_proveedor</th>
+                        <th scope="col">Tipo documento</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">detalles_productos</th>
+                      </tr>
+                    </thead>
 
-            <?php 
-            #capturamos la conexio
-            $sql="SELECT * FROM proveedor";
-            $query=mysqli_query($con,$sql);
-            if($query){
-                $contador=1;
-                while ($row=mysqli_fetch_assoc($query)) {
-                    #capturamos los datos
-                    $id_proveedor = $row["id_proveedor"];
-                    $id_tdoc_proveedor = $row["id_tdoc_proveedor"];
-                    $producto = $row["producto"];
-                    $detalles_productos = $row["detalles_productos"];    
-             ?>
+                    <?php 
+                    #capturamos la conexio
+                    $sql="SELECT * FROM proveedor p INNER JOIN usuario u ON p.id_proveedor = u.id_usuario INNER JOIN documento_identificacion di ON u.id_tdoc_usuario = di.id_documento";
+                    $query=mysqli_query($con,$sql);
+                    if($query){
+                        $contador=1;
+                        while ($row=mysqli_fetch_assoc($query)) {
+                            #capturamos los datos
+                            $id_proveedor = $row["id_proveedor"];
+                            $id_tdoc_proveedor = $row["tipo_documento"];
+                            $nombre = $row["nombre"];
+                            $email = $row["email"];
+                            $producto = $row["producto"];
+                            $detalles_productos = $row["detalles_productos"];    
+                     ?>
 
-            <tr>
-                <th scope="row"><?php echo $id_proveedor; ?></th>
-                <td><?php echo $id_tdoc_proveedor; ?></td>
-                <td><?php echo $producto; ?></td>
-                <td><?php echo $detalles_productos; ?></td>
-            </tr>
-            <?php
-                }
-            }
-            ?>
-          </table>
+                    <tr>
+                        <th scope="row"><?php echo $id_proveedor; ?></th>
+                        <td><?php echo $id_tdoc_proveedor; ?></td>
+                        <td><?php echo $nombre; ?></td>
+                        <td><?php echo $email; ?></td>
+                        <td><?php echo $producto; ?></td>
+                        <td><?php echo $detalles_productos; ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                  </table>
+            </section>
     </section>
     </main>
     <div class="pqrs">

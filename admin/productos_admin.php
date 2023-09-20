@@ -145,7 +145,8 @@ $con=conectar();
                     <thead class="table-dark">
                       <tr>
                         <th scope="col">Id_producto</th>
-                        <th scope="col">Id_categoria_producto</th>
+                        <th scope="col">Id_Categoria</th>
+                        <th scope="col">Categoria</th>
                         <th scope="col">Nom_producto</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Unidades</th>
@@ -155,7 +156,7 @@ $con=conectar();
 
                     <?php 
                     #capturamos la conexio
-                    $sql="SELECT * FROM producto LIMIT 8";
+                    $sql="SELECT *,cp.nombre_categoria FROM producto p INNER JOIN categoria_producto cp ON p.id_categoria_producto = cp.id_categoria LIMIT 8";
                     $query=mysqli_query($con,$sql);
                     if($query){
                         $contador=1;
@@ -163,6 +164,7 @@ $con=conectar();
                             #capturamos los datos
                             $id_producto = $row["id_producto"];
                             $id_categoria_producto = $row["id_categoria_producto"];
+                            $categoria_producto = $row["nombre_categoria"];
                             $nom_producto = $row["nom_producto"];
                             $precio = $row["precio"];
                             $unidades = $row["unidades"];               
@@ -172,6 +174,7 @@ $con=conectar();
                     <tr>
                         <th scope="row"><?php echo $id_producto; ?></th>
                         <td><?php echo $id_categoria_producto; ?></td>
+                        <td><?php echo $categoria_producto; ?></td>
                         <td><?php echo $nom_producto; ?></td>
                         <td><?php echo $precio; ?></td>
                         <td><?php echo $unidades; ?></td>

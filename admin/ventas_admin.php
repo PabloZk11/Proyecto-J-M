@@ -180,8 +180,9 @@ $con=conectar();
                     <thead class="table-dark">
                       <tr>
                         <th scope="col">Id_factura</th>
-                        <th scope="col">Id_tdoc_vendedor_factura</th>
-                        <th scope="col">Id_vendedor_factura</th>
+                        <th scope="col">Tipo_documento</th>
+                        <th scope="col">Id_vendedor</th>
+                        <th scope="col">Nombre_vendedor</th>
                         <th scope="col">Descripcion</th>
                         <th scope="col">Factura</th>
                       </tr>
@@ -189,15 +190,16 @@ $con=conectar();
 
                     <?php 
                     #capturamos la conexio
-                    $sql="SELECT * FROM factura";
+                    $sql="SELECT f.id_factura, di.tipo_documento, u.id_usuario, u.nombre, f.descripcion, f.fecha FROM factura f INNER JOIN vendedor v ON f.id_vendedor_factura = v.id_usuario_papeleria INNER JOIN usuario u ON v.id_usuario_papeleria = u.id_usuario INNER JOIN documento_identificacion di ON u.id_tdoc_usuario = di.id_documento";
                     $query=mysqli_query($con,$sql);
                     if($query){
                         $contador=1;
                         while ($row=mysqli_fetch_assoc($query)) {
                             #capturamos los datos
                             $id_factura = $row["id_factura"];
-                            $id_tdoc_vendedor_factura = $row["id_tdoc_vendedor_factura"];
-                            $id_vendedor_factura = $row["id_vendedor_factura"];
+                            $tipo_documento = $row["tipo_documento"];
+                            $id_vendedor = $row["id_usuario"];
+                            $nombre_vendedor = $row["nombre"];
                             $descripcion = $row["descripcion"];
                             $fecha = $row["fecha"];               
 
@@ -205,8 +207,9 @@ $con=conectar();
 
                     <tr>
                         <th scope="row"><?php echo $id_factura; ?></th>
-                        <td><?php echo $id_tdoc_vendedor_factura; ?></td>
-                        <td><?php echo $id_vendedor_factura; ?></td>
+                        <td><?php echo $tipo_documento; ?></td>
+                        <td><?php echo $id_vendedor; ?></td>
+                        <td><?php echo $nombre_vendedor; ?></td>
                         <td><?php echo $descripcion; ?></td>
                         <td><?php echo $fecha; ?></td>
                     </tr>

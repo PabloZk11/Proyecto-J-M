@@ -171,19 +171,20 @@ $con=conectar();
                 <table class="table table-striped">
                     <thead class="table-dark">
                       <tr>
-                        <th scope="col">id_entrada</th>
-                        <th scope="col">nom_producto</th>
-                        <th scope="col">cantidad_unidades</th>
-                        <th scope="col">precio_compra</th>
+                        <th scope="col">Id_entrada</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Valor</th>
                         <th scope="col">Descripcion/Detalles</th>
-                        <th scope="col">id_pedido_entrada</th>
-                        <th scope="col">id_proveedor_entrada</th>
+                        <th scope="col">Num Pedido</th>
+                        <th scope="col">Id_Proveedor</th>
+                        <th scope="col">Proveedor</th>
                       </tr>
                     </thead>
 
                     <?php 
                     #capturamos la conexio
-                    $sql="SELECT * FROM entrada_mercancia";
+                    $sql="SELECT * FROM entrada_mercancia em INNER JOIN proveedor p ON em.id_proveedor_entrada = p.id_proveedor INNER JOIN usuario u ON p.id_proveedor = u.id_usuario LIMIT 8";
                     $query=mysqli_query($con,$sql);
                     if($query){
                         $contador=1;
@@ -195,7 +196,8 @@ $con=conectar();
                             $precio_compra = $row["precio_compra"];               
                             $detalles_descripcion = $row["detalles_descripcion"];
                             $id_pedido_entrada = $row["id_pedido_entrada"];    
-                            $id_proveedor_entrada = $row["id_proveedor_entrada"];    
+                            $id_proveedor_entrada = $row["id_proveedor_entrada"];
+                            $nom_proveedor = $row["nombre"];    
                      ?>
 
                     <tr>
@@ -206,6 +208,7 @@ $con=conectar();
                         <td><?php echo $detalles_descripcion; ?></td>
                         <td><?php echo $id_pedido_entrada; ?></td>
                         <td><?php echo $id_proveedor_entrada; ?></td>
+                        <td><?php echo $nom_proveedor; ?></td>
                     </tr>
                     <?php
                         }
