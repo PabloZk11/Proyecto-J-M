@@ -45,36 +45,6 @@ body a{
     display: flex; list-style: none; 
 }
 
-.li_nav { 
-    margin: 30px 15px 15px; 
-    margin-right: 25px;
-    transition: all 0.2s ease 0s; 
-}
-
-
-.a_nav {
-    width: 50px;
-    padding: 10px;
-    font-size: 22px; 
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none; 
-    transition: all 0.2s ease 0s; 
-    border-radius: 5px;
-}
-
-.a_nav:link { 
-    color: #fff; 
-}
-
-.a_nav:visited { 
-    color: #fff; 
-}
-
-.a_nav:hover { 
-    color: #fff; 
-    background-color: #0d29a5;
-}
-
 /*Navegacion fin*/
 
 
@@ -156,7 +126,7 @@ body a{
 .menu_nav{
     display: flex;
     flex-direction: column;
-    height: 10REM;
+    list-style: none;
 }
 
 .sidebar h2{
@@ -171,7 +141,7 @@ body a{
 }
 
 .sidebar ul li {
-    margin: 15px 0;
+    margin: 12px 0;
 }
 
 .sidebar ul li label{
@@ -180,7 +150,6 @@ body a{
 
 .sidebar ul li a{
     color: #fff;
-    padding: 0 30px;
     transition: all 0.25s ease;
 }
 

@@ -11,14 +11,14 @@ $password=$_POST['contra'];
 
 $consulta= "INSERT INTO usuario values ('$id_usuario','$id_tdoc','$nombre','$email','$password'); ";
 
-$resultado=mysqli_query($conexion,$consulta) or die("Error de registro");
+$resultado=mysqli_query($con,$consulta) or die("Error de registro");
 
 echo "Registrado correctamente";
 
 if ($resultado === true) {
     // Insertar en la tabla correspondiente (cliente)
     $sql_cliente = "INSERT INTO proveedor (id_proveedor, id_tdoc_proveedor) VALUES ('$id_usuario', '$id_tdoc')";
-    $resultado_cliente = $conexion->query($sql_cliente);
+    $resultado_cliente = $con->query($sql_cliente);
 
     if ($resultado_cliente === true) {
         echo "Registro insertado correctamente.";

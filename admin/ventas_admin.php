@@ -1,7 +1,6 @@
 <?php
 
 include("../php/conexion.php");
-$con=conectar();
 
 ?>
 
@@ -14,7 +13,7 @@ $con=conectar();
     <link rel="stylesheet" href="ventas_vendedor.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>Productos</title>
+    <title>Ventas</title>
 </head>
 <body>
     <header id="header">
@@ -36,7 +35,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="productos_admin.html" class="but_menu">
+                    <a href="productos_admin.php" class="but_menu">
                         <i class="fas fa-server"></i>
                         <label for="btn-modal-ventas">
                             Productos
@@ -44,7 +43,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="proveedores.html" class="but_menu">
+                    <a href="proveedores.php" class="but_menu">
                         <i class="fa-solid fa-truck-field"></i>      
                         <label for="btn-modal-ventas">
                             Proveedores
@@ -52,7 +51,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="tabla_mercancia.html" class="but_menu">
+                    <a href="tabla_mercancia.php" class="but_menu">
                         <i class="fa-solid fa-boxes-stacked"></i>
                         <label for="btn-modal-ventas">
                             Mercancia
@@ -106,22 +105,21 @@ $con=conectar();
             <div class="content-modal-añadir">
                 <h2>Añadir Venta</h2>
                 <div>
-                    <form class="formulario">
+                    <form class="formulario" action="../php/ventas_admin.php" method="post">
                         <div class="f1">
         
-                            <input type="number" name="Id del producto  " class="in" placeholder="Id del producto:" required="required">
-                            <input type="search" name="Vendedor" class="in" placeholder="Vendedor:" required="required">
-                            <input type="search" name="Nombre" class="in" placeholder="Nombre:" required="required">
-                            <input type="number" name="Cantidad" class="in" placeholder="Cantidad:" required="required">
-                            <input type="number" name="Valor Compra" class="in" placeholder="Valor Compra:" required="required">
-                            <input type="date" name="Fecha" class="in" placeholder="Fecha:" required="required">
+                            <input type="number" name="id_factura" class="in" placeholder="id_factura:" required="required">
+                            <input type="number" name="id_tdoc_vendedor" class="in" placeholder="id_tdoc_vendedor:" required="required">
+                            <input type="number" name="id_vendedor" class="in" placeholder="id_vendedor:" required="required">
+                            <input type="number" name="id_producto" class="in" placeholder="id_producto:" required="required">
+                            <input type="number" name="unidades" class="in" placeholder="unidades:" required="required">
+                            <input type="number" name="valor_venta" class="in" placeholder="Valor Venta:" required="required">
+                            <input type="text" name="descripcion" class="in" placeholder="descripcion:" required="required">
+                            <input type="date" name="fecha" class="in" placeholder="fecha_facturacion:" required="required">
                             
-            
+                            <button type="sumbit">registrar</button>
                         </div>
                     </form> 
-                </div>
-                <div class="btn-cerrar-añadir" >
-                    <label for="btn-modal-añadir" ><a href="ventas_vendedor_añadir.html"><input type="submit" value="Añadir" class="enviar"></a></label>
                 </div>
             </div>
             <label for="btn-modal-añadir" class="cerrar-modal-añadir"></label>

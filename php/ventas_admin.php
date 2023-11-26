@@ -2,19 +2,25 @@
 
 include('conexion.php');
 
-$nom_m=$_POST['nombre_mer'];
-$cantidad_u=$_POST['cantidad_u'];
-$precio=$_POST['precio_compra'];
-$desc=$_POST['descripccion'];
-$id_p=$_POST['id_pedido'];
-$id_pr=$_POST['id_proveedor'];
+$id_factura=$_POST['id_factura'];
+$tdoc=$_POST['id_tdoc_vendedor'];
+$id_vendedor=$_POST['id_vendedor'];
+$id_factura_detalle=$_POST['id_factura'];
+$id_producto=$_POST['id_producto'];
+$unidades=$_POST['unidades'];
+$precio=$_POST['valor_venta'];
+$desc=$_POST['descripcion'];
+$fecha=$_POST['fecha'];
 
 
-$consulta= "INSERT INTO entrada_mercancia (nom_producto,cantidad_unidades,precio_compra,detalles_descripcion,id_pedido_entrada,id_proveedor_entrada ) 
-values ('$nom_m','$cantidad_u','$precio','$desc','$id_p','$id_pr'); ";
+$consulta= "INSERT INTO factura (id_factura,id_tdoc_vendedor_factura,id_vendedor_factura,descripcion,fecha) 
+values ('$id_factura','$tdoc','$id_vendedor','$desc','$fecha')";
 
-$resultado=mysqli_query($conexion,$consulta) or die("Error de registro");
+$consulta_factura_detalle= "INSERT INTO detalle_factura (id_factura_detalle,id_producto_detalle,unidades,precio) 
+values ('$id_factura','$id_producto','$unidades','$precio')";
 
+$resultado=mysqli_query($con,$consulta) or die("Error de registro");
+$resultado2=mysqli_query($con,$consulta_factura_detalle) or die("Error de registro");
 echo "Registrado correctamente";
 
 ?>

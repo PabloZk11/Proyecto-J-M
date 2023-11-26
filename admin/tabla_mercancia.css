@@ -156,7 +156,7 @@ body a{
 .menu_nav{
     display: flex;
     flex-direction: column;
-    height: 10REM;
+    list-style: none;
 }
 
 .sidebar h2{
@@ -171,7 +171,7 @@ body a{
 }
 
 .sidebar ul li {
-    margin: 15px 0;
+    margin: 12px 0;
 }
 
 .sidebar ul li label{
@@ -180,7 +180,6 @@ body a{
 
 .sidebar ul li a{
     color: #fff;
-    padding: 0 30px;
     transition: all 0.25s ease;
 }
 

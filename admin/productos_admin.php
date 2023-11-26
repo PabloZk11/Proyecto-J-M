@@ -1,7 +1,6 @@
 <?php
 
 include("../php/conexion.php");
-$con=conectar();
 
 ?>
 
@@ -38,7 +37,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="ventas_admin.html" class="but_menu">
+                    <a href="ventas_admin.php" class="but_menu">
                         <i class="fa-sharp fa-solid fa-cart-shopping"></i>
                         <label for="btn-modal-ventas">
                             Ventas
@@ -46,7 +45,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="proveedores.html" class="but_menu">
+                    <a href="proveedores.php" class="but_menu">
                         <i class="fa-solid fa-truck-field"></i>      
                         <label for="btn-modal-ventas">
                             Proveedores
@@ -54,7 +53,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="tabla_mercancia.html" class="but_menu">
+                    <a href="tabla_mercancia.php" class="but_menu">
                         <i class="fa-solid fa-boxes-stacked"></i>
                         <label for="btn-modal-ventas">
                             Mercancia
@@ -96,11 +95,13 @@ $con=conectar();
                     <form class="formulario" action="../php/registrar_productos.php" method="post">
                         <div class="f1">
         
-                           <input type="text" name="id_producto" class="in" placeholder="id_producto" required="required">
+                            <input type="text" name="id_producto" class="in" placeholder="id_producto" required="required">
                             <input type="text" name="categoria" class="in" placeholder="id_categoria_producto" required="required">
                             <input type="text" name="nom_producto" class="in" placeholder="Nombre:" required="required">
                             <input type="number" name="precio" class="in" placeholder="precio:" required="required">
                             <input type="text" name="unidades" class="in" placeholder="Unidades:" required="required">
+                            <input type="text" name="detalles" class="in" placeholder="detalles:" required="required">
+                            <input type="text" name="detalles" class="in" placeholder="detalles:" required="required">
                             <input type="text" name="detalles" class="in" placeholder="detalles:" required="required">
 
                             <button type="sumbit">registrar</button>

@@ -1,7 +1,6 @@
 <?php
 
 include("../php/conexion.php");
-$con=conectar();
 
 ?>
 
@@ -37,7 +36,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="ventas_admin.html" class="but_menu">
+                    <a href="ventas_admin.php" class="but_menu">
                         <i class="fa-sharp fa-solid fa-cart-shopping"></i>
                         <label for="btn-modal-ventas">
                             Ventas
@@ -45,7 +44,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="productos_admin.html" class="but_menu">
+                    <a href="productos_admin.php" class="but_menu">
                         <i class="fas fa-server"></i>
                         <label for="btn-modal-ventas">
                             Productos
@@ -53,7 +52,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="tabla_mercancia.html" class="but_menu">
+                    <a href="tabla_mercancia.php" class="but_menu">
                         <i class="fa-solid fa-boxes-stacked"></i>
                         <label for="btn-modal-ventas">
                             Mercancia
@@ -106,7 +105,7 @@ $con=conectar();
     <input type="checkbox" id="btn-modal-añadir">
     <div class="container-modal-añadir">
         <div class="content-modal-añadir">
-            <h2>Registrar Vendedor</h2>
+            <h2>Registrar Proveedor</h2>
             <div>
                 <form class="formulario" action="../php/registro_proveedor.php" method="POST">
                     <div class="f1">

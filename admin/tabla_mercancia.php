@@ -1,8 +1,6 @@
 <?php
 
 include("../php/conexion.php");
-$con=conectar();
-
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +13,7 @@ $con=conectar();
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-    <title>Productos</title>
+    <title>Entrada Mercancia</title>
 </head>
 <body>
     <header id="header">
@@ -37,7 +35,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="ventas_admin.html" class="but_menu">
+                    <a href="ventas_admin.php" class="but_menu">
                         <i class="fa-sharp fa-solid fa-cart-shopping"></i>
                         <label for="btn-modal-ventas">
                             Ventas
@@ -45,7 +43,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="productos_admin.html" class="but_menu">
+                    <a href="productos_admin.php" class="but_menu">
                         <i class="fas fa-server"></i>
                         <label for="btn-modal-ventas">
                             Productos
@@ -53,7 +51,7 @@ $con=conectar();
                     </a>
                 </li>
                 <li>
-                    <a href="proveedores.html" class="but_menu">
+                    <a href="proveedores.php" class="but_menu">
                         <i class="fa-solid fa-truck-field"></i>      
                         <label for="btn-modal-ventas">
                             Proveedores
@@ -109,7 +107,7 @@ $con=conectar();
                     <div class="f1">
                         <input type="search" name="nombre_mer" class="in" placeholder="Nombre mercancía:" required="required">
                         <input type="search" name="cantidad_u" class="in" placeholder="Cantidad id_pedido_entrada:" required="required">
-                        <input type="search" name="precio_compra_compra" class="in" placeholder="precio_compra Compra:" required="required">
+                        <input type="search" name="precio_compra" class="in" placeholder="precio_compra Compra:" required="required">
                         <input type="search" name="descripccion" class="in" placeholder="Descripccion:" required="required">
                         <input type="search" name="id_pedido" class="in" placeholder="Id_Pedido:" required="required">
                         <input type="search" name="id_proveedor" class="in" placeholder="Id_Proveedor:" required="required">
