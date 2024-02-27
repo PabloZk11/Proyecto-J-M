@@ -198,6 +198,10 @@
         position: absolute;
     }
 
+    .g-recaptcha{
+        margin-top: 25px ;
+    }
+
 
     /*Formularios*/
 
@@ -254,6 +258,10 @@ margin: 10px 11px 15px 0;
     color: #000;
     transition: all .25s ease;
     text-decoration: none;
+}
+
+.siuuuu{
+    margin-top: 28px;
 }
 
 .entrar:link{

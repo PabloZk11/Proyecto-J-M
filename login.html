@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="css/ingresar_como.css">
     
   </head>
@@ -20,7 +20,7 @@
       </nav>
         <main>
             <div class="contenedor__todo">
-                <div class="caja__trasera">
+                <div class="caja__trasera"> 
                     <div class="caja__trasera-login">
                         <h3>¿Iniciar sesión administrador?</h3>
                         <p>Inicia sesión para entrar en la página </p>
@@ -41,6 +41,9 @@
                         <input type="text" placeholder="Correo Electronico">
                         <input type="password" placeholder="Contraseña">
                         <button ><a href="admin/index-admin.html" class="entrar">Ingresar</a></button>
+                        <div class="siuuuu">
+                            <div class="g-recaptcha" data-sitekey="6LdJuzQpAAAAAMW-zIJlm411zY4TyDjO4vKAHXlY"></div>
+                        </div>
                     </form>
     
                     <!--Register-->
@@ -49,6 +52,9 @@
                         <input type="text" placeholder="Correo Electronico">
                         <input type="password" placeholder="Contraseña">
                         <button id="entrar_ven"><a href="vendedor/index-vendedor.html" class="entrar">Ingresar</a></button>
+                        <div class="siuuuu">
+                            <div class="g-recaptcha" data-sitekey="6LdJuzQpAAAAAMW-zIJlm411zY4TyDjO4vKAHXlY"></div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -63,6 +69,22 @@
         </footer>  
 
 
-        <script src="./JS/script.js"></script>   
+        <script src="./JS/script.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var formularios = document.querySelectorAll(".formulario__login, .formulario__register");
+        
+                formularios.forEach(function(formulario) {
+                    formulario.addEventListener("submit", function(event) {
+                        var recaptchaResponse = grecaptcha.getResponse();
+        
+                        if (recaptchaResponse.length === 0) {
+                            alert("Por favor, completa el captcha antes de ingresar.");
+                            event.preventDefault(); // Evita que el formulario se envíe si no se completa el captcha
+                        }
+                    });
+                });
+            });
+        </script>  
 </body>
 </html>

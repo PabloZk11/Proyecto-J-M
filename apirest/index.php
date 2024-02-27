@@ -3,8 +3,9 @@ $host = "localhost";
 $usuario = "root";
 $password = "";
 $database = "aula";
+$port = "3307";
 
-$conexion = new mysqli($host, $usuario, $password, $database) or die("Error De Conexion");
+$conexion = new mysqli($host, $usuario, $password, $database, $port = "3307") or die("Error De Conexion");
 
 header("Content_Type: application/json");
 $metodo = $_SERVER['REQUEST_METHOD'];
@@ -98,3 +99,4 @@ function actualizar($conexion, $id)
     }
 }
 ?>
+

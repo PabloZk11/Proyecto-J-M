@@ -15,19 +15,19 @@ $buscarId = explode('/', $path);
 $id = ($path !== '/') ? end($buscarId) : null;
 
 switch ($metodo) {
-    // Select vendedores
+    // Select proveedores
     case 'GET':
         consulta($conexion, $id);
         break;
-    // Insert vendedores
+    // Insert proveedores
     case 'POST':
         insertar($conexion);
         break;
-    // Update vendedores
+    // Update proveedores
     case 'PUT':
         actualizar($conexion, $id);
         break;
-    // Delete vendedores
+    // Delete proveedores
     case 'DELETE':
         borrar($conexion, $id);
         break;
@@ -38,7 +38,7 @@ switch ($metodo) {
 
 function consulta($conexion, $id)
 {
-    $sql = ($id === null) ? "SELECT * FROM vendedor" : "SELECT * FROM vendedor WHERE id_usuario_papeleria=$id";
+    $sql = ($id === null) ? "SELECT * FROM proveedor" : "SELECT * FROM proveedor WHERE id_proveedor=$id";
     $resultado = $conexion->query($sql);
 
     if ($resultado) {
@@ -53,43 +53,47 @@ function consulta($conexion, $id)
 function insertar($conexion)
 {
     $dato = json_decode(file_get_contents('php://input'), true);
-    $id_usuario_papeleria = $dato['id_usuario_papeleria'];
-    $id_tdoc_vendedor = $dato['id_tdoc_vendedor'];
+    $id_proveedor = $dato['id_proveedor'];
+    $id_tdoc_proveedor = $dato['id_tdoc_proveedor'];
+    $producto = $dato['producto'];
+    $detalles_productos = $dato['detalles_productos'];
 
-    $sql = "INSERT INTO vendedor (id_usuario_papeleria, id_tdoc_vendedor) VALUES ('$id_usuario_papeleria', '$id_tdoc_vendedor')";
+    $sql = "INSERT INTO proveedor (id_proveedor, id_tdoc_proveedor, producto, detalles_productos) VALUES ('$id_proveedor', '$id_tdoc_proveedor', '$producto', '$detalles_productos')";
     $resultado = $conexion->query($sql);
 
     if ($resultado) {
-        echo json_encode(array("mensaje" => "Vendedor creado"));
+        echo json_encode(array("mensaje" => "Proveedor creado"));
     } else {
-        echo json_encode(array('error' => 'Error al crear el vendedor'));
+        echo json_encode(array('error' => 'Error al crear el proveedor'));
     }
 } 
 
 function borrar($conexion, $id)
 {
-    $sql = "DELETE FROM vendedor WHERE id_usuario_papeleria = $id";
+    $sql = "DELETE FROM proveedor WHERE id_proveedor = $id";
     $resultado = $conexion->query($sql);
 
     if ($resultado) {
-        echo json_encode(array("mensaje" => "Vendedor borrado"));
+        echo json_encode(array("mensaje" => "Proveedor borrado"));
     } else {
-        echo json_encode(array('error' => 'Error al borrar el vendedor'));
+        echo json_encode(array('error' => 'Error al borrar el proveedor'));
     }
 }
 
 function actualizar($conexion, $id)
 {
     $dato = json_decode(file_get_contents('php://input'), true);
-    $id_tdoc_vendedor = $dato['id_tdoc_vendedor'];
+    $id_tdoc_proveedor = $dato['id_tdoc_proveedor'];
+    $producto = $dato['producto'];
+    $detalles_productos = $dato['detalles_productos'];
 
-    $sql = "UPDATE vendedor SET id_tdoc_vendedor='$id_tdoc_vendedor' WHERE id_usuario_papeleria = $id";
+    $sql = "UPDATE proveedor SET id_tdoc_proveedor='$id_tdoc_proveedor', producto='$producto', detalles_productos='$detalles_productos' WHERE id_proveedor = $id";
     $resultado = $conexion->query($sql);
 
     if ($resultado) {
-        echo json_encode(array("mensaje" => "Vendedor actualizado"));
+        echo json_encode(array("mensaje" => "Proveedor actualizado"));
     } else {
-        echo json_encode(array('error' => 'Error al actualizar el vendedor'));
+        echo json_encode(array('error' => 'Error al actualizar el proveedor'));
     }
 }
 ?>
