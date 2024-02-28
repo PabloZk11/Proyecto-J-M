@@ -257,7 +257,6 @@ CREATE TABLE `factura_entrada` (
 
 CREATE TABLE `factura_salida` (
   `id_factura` int(11) NOT NULL,
-  `id_tdoc_vendedor_factura` int(11) NOT NULL,
   `id_vendedor_factura` int(11) NOT NULL,
   `descripcion` varchar(45) NOT NULL,
   `fecha` datetime NOT NULL
@@ -616,8 +615,8 @@ ALTER TABLE `factura_entrada`
 -- Indices de la tabla `factura_salida`
 --
 ALTER TABLE `factura_salida`
-  ADD PRIMARY KEY (`id_factura`,`id_tdoc_vendedor_factura`),
-  ADD KEY `id_vendedor_factura` (`id_vendedor_factura`,`id_tdoc_vendedor_factura`);
+  ADD PRIMARY KEY (`id_factura`),
+  ADD KEY `id_vendedor_factura` (`id_vendedor_factura`,);
 
 --
 -- Indices de la tabla `log_informe`
