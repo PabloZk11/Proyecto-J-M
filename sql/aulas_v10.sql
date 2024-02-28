@@ -266,14 +266,14 @@ CREATE TABLE `factura_salida` (
 -- Volcado de datos para la tabla `factura_salida`
 --
 
-INSERT INTO `factura_salida` (`id_factura`, `id_tdoc_vendedor_factura`, `id_vendedor_factura`, `descripcion`, `fecha`) VALUES
-(501, 3, 109, 'Bascula digital', '2023-09-11 15:28:30'),
-(502, 1, 110, 'Borrado Pelikan Miga de Pan', '2023-09-11 15:28:30'),
-(503, 1, 111, 'Caja de Colores Pastel Kiut Norma x 6', '2023-09-05 15:28:34'),
-(504, 2, 112, 'Caja Borrador faber castell X 20 und TK-20F', '2023-09-28 15:28:38'),
-(505, 3, 113, 'Calculadora 240 Funciones Casio FX82MS', '2023-09-17 15:28:46'),
-(506, 1, 114, 'Cinta correctora faber castell', '2023-09-25 15:28:42'),
-(507, 1, 115, 'Colores Norma Premium x 24(NULL)', '2023-09-21 15:28:50');
+INSERT INTO `factura_salida` (`id_factura`, `id_vendedor_factura`, `descripcion`, `fecha`) VALUES
+(501, 109, 'Bascula digital', '2023-09-11 15:28:30'),
+(502, 110, 'Borrado Pelikan Miga de Pan', '2023-09-11 15:28:30'),
+(503, 111, 'Caja de Colores Pastel Kiut Norma x 6', '2023-09-05 15:28:34'),
+(504, 112, 'Caja Borrador faber castell X 20 und TK-20F', '2023-09-28 15:28:38'),
+(505, 113, 'Calculadora 240 Funciones Casio FX82MS', '2023-09-17 15:28:46'),
+(506, 114, 'Cinta correctora faber castell', '2023-09-25 15:28:42'),
+(507, 115, 'Colores Norma Premium x 24(NULL)', '2023-09-21 15:28:50');
 
 -- --------------------------------------------------------
 
@@ -616,7 +616,7 @@ ALTER TABLE `factura_entrada`
 --
 ALTER TABLE `factura_salida`
   ADD PRIMARY KEY (`id_factura`),
-  ADD KEY `id_vendedor_factura` (`id_vendedor_factura`,);
+  ADD KEY `id_vendedor_factura` (`id_vendedor_factura`);
 
 --
 -- Indices de la tabla `log_informe`
@@ -801,8 +801,8 @@ ALTER TABLE `factura_entrada`
 -- Filtros para la tabla `factura_salida`
 --
 ALTER TABLE `factura_salida`
-  ADD CONSTRAINT `factura_salida_ibfk_1` FOREIGN KEY (`id_vendedor_factura`,`id_tdoc_vendedor_factura`) REFERENCES `vendedor` (`id_usuario_papeleria`, `id_tdoc_vendedor`),
-  ADD CONSTRAINT `factura_salida_ibfk_2` FOREIGN KEY (`id_vendedor_factura`,`id_tdoc_vendedor_factura`) REFERENCES `vendedor` (`id_usuario_papeleria`, `id_tdoc_vendedor`);
+  ADD CONSTRAINT `factura_salida_ibfk_1` FOREIGN KEY (`id_vendedor_factura`) REFERENCES `vendedor` (`id_usuario_papeleria`),
+  ADD CONSTRAINT `factura_salida_ibfk_2` FOREIGN KEY (`id_vendedor_factura`) REFERENCES `vendedor` (`id_usuario_papeleria`);
 
 --
 -- Filtros para la tabla `log_informe`
